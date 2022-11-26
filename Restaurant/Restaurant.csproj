@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Encrypt_Functions.cs" />
     <Compile Include="Forgot_Password.cs" />
+    <Compile Include="Forgot_Password_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forgot_Password_Form.Designer.cs">
+      <DependentUpon>Forgot_Password_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
