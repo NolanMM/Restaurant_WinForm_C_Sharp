@@ -45,11 +45,11 @@
             this.username_input.AutoSize = true;
             this.username_input.BackColor = System.Drawing.Color.Transparent;
             this.username_input.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.username_input.Font = new System.Drawing.Font("Forte", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username_input.ForeColor = System.Drawing.Color.SlateBlue;
-            this.username_input.Location = new System.Drawing.Point(40, 185);
+            this.username_input.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username_input.ForeColor = System.Drawing.Color.GhostWhite;
+            this.username_input.Location = new System.Drawing.Point(50, 167);
             this.username_input.Name = "username_input";
-            this.username_input.Size = new System.Drawing.Size(146, 35);
+            this.username_input.Size = new System.Drawing.Size(169, 45);
             this.username_input.TabIndex = 1;
             this.username_input.Text = "Username";
             // 
@@ -57,11 +57,11 @@
             // 
             this.password_input.AutoSize = true;
             this.password_input.BackColor = System.Drawing.Color.Transparent;
-            this.password_input.Font = new System.Drawing.Font("Forte", 24F);
-            this.password_input.ForeColor = System.Drawing.Color.SlateBlue;
-            this.password_input.Location = new System.Drawing.Point(39, 255);
+            this.password_input.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password_input.ForeColor = System.Drawing.Color.GhostWhite;
+            this.password_input.Location = new System.Drawing.Point(50, 237);
             this.password_input.Name = "password_input";
-            this.password_input.Size = new System.Drawing.Size(147, 35);
+            this.password_input.Size = new System.Drawing.Size(163, 45);
             this.password_input.TabIndex = 1;
             this.password_input.Text = "Password";
             // 
@@ -69,12 +69,12 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("Forte", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(106, 26);
+            this.label1.Location = new System.Drawing.Point(78, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(854, 79);
+            this.label1.Size = new System.Drawing.Size(921, 79);
             this.label1.TabIndex = 2;
             this.label1.Text = "Welcome To Space Restaurant";
             // 
@@ -100,12 +100,13 @@
             this.forgot_password_btn.Size = new System.Drawing.Size(142, 28);
             this.forgot_password_btn.TabIndex = 5;
             this.forgot_password_btn.Text = "Forgot Password";
+            this.forgot_password_btn.Click += new System.EventHandler(this.forgot_password_btn_Click);
             // 
             // Login_btn
             // 
             this.Login_btn.BackColor = System.Drawing.Color.Black;
-            this.Login_btn.Font = new System.Drawing.Font("Forte", 24F);
-            this.Login_btn.ForeColor = System.Drawing.Color.Maroon;
+            this.Login_btn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_btn.ForeColor = System.Drawing.Color.Snow;
             this.Login_btn.Location = new System.Drawing.Point(223, 370);
             this.Login_btn.Name = "Login_btn";
             this.Login_btn.Size = new System.Drawing.Size(202, 45);
@@ -128,7 +129,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Font = new System.Drawing.Font("Forte", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.DarkRed;
             this.button2.Location = new System.Drawing.Point(12, 544);
             this.button2.Name = "button2";
@@ -183,8 +184,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label username_input;
-        private System.Windows.Forms.Label password_input;
         public System.Windows.Forms.Label forgot_password_btn;
         public System.Windows.Forms.TextBox username_box;
         public System.Windows.Forms.TextBox textBox2;
@@ -192,6 +191,8 @@
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.Button Login_btn;
         public System.Windows.Forms.Label incorrect_message;
+        public System.Windows.Forms.Label username_input;
+        public System.Windows.Forms.Label password_input;
     }
 }
 

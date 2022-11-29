@@ -52,5 +52,12 @@ namespace Restaurant
         {
             System.Environment.Exit(0);   
         }
+
+        private void forgot_password_btn_Click(object sender, EventArgs e)
+        {
+            Forgot_Password_Form frm = new Forgot_Password_Form();
+            this.Hide();
+            frm.ShowDialog();
+        }
     }
 }
