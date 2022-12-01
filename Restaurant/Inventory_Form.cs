@@ -93,7 +93,7 @@ namespace Restaurant
                     Name_Food_box.Focus();
                 }
             }
-            else MessageBox.Show("Error when delete");
+            else MessageBox.Show("Error when modify");
         }
 
         private void Delete_btn_Click(object sender, EventArgs e)
@@ -103,10 +103,11 @@ namespace Restaurant
                 DialogResult dl = MessageBox.Show("Do you want to delete the item", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (dl == DialogResult.OK)
                 {
+                    LinkedList<Inventory_Food> temp = Inventory_Functions.Read_The_Inventory_From_File();
                     StreamWriter strm = File.CreateText("Inventory.txt");
                     strm.Flush();
                     strm.Close();
-                    LinkedList<Inventory_Food> temp = Inventory_Functions.Read_The_Inventory_From_File();
+                    
                     Inventory_Food temp_node = Inventory_Functions.Node_From_List_by_name_of_Food_in_Inventory_List(listView_inventory.SelectedItems[0].Text,temp);
                     bool test = temp.Remove(temp_node);
                     temp.Remove(temp_node);

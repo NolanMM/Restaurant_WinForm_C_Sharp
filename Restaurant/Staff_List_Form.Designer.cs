@@ -646,13 +646,13 @@
             this.listView_staff.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("listView_staff.BackgroundImage")));
             this.listView_staff.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView_staff.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.FirstName,
-            this.LastName,
             this.username,
             this.password,
+            this.FirstName,
+            this.LastName,
             this.role,
-            this.recovery_email,
-            this.Salary});
+            this.Salary,
+            this.recovery_email});
             this.listView_staff.ForeColor = System.Drawing.Color.White;
             this.listView_staff.GridLines = true;
             this.listView_staff.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
@@ -692,13 +692,11 @@
             // 
             // recovery_email
             // 
-            this.recovery_email.DisplayIndex = 6;
             this.recovery_email.Text = "Recovery Email";
             this.recovery_email.Width = 220;
             // 
             // Salary
             // 
-            this.Salary.DisplayIndex = 5;
             this.Salary.Text = "Salary";
             // 
             // Staff_List_Form

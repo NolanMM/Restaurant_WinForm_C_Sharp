@@ -99,6 +99,33 @@ namespace Restaurant
             }
             return find_item;
         }
+        static public Staff_Login Find_Item_by_selection_Return_Node(string username, LinkedList<Staff_Login> staff_Login_List)
+        {
+            Staff_Login find_item = new Staff_Login();
+            int flag = 0;
+            int count = staff_Login_List.Count();
+            foreach (Staff_Login item in staff_Login_List)
+            {
+                if (flag <= count)
+                {
+                    if (username.CompareTo(item.getUserName()) == 0)
+                    {
+                        find_item = item;
+                        return find_item;
+                    }
+                    else
+                    {
+                        flag++;
+                    }
+                }
+                else
+                {
+                    find_item = null;
+                    return find_item;
+                }
+            }
+            return find_item;
+        }
 
         static public LinkedList<Staff_Login> Create_Read_Account_Login_List()
         {
