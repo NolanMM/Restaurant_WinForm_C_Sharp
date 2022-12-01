@@ -8,16 +8,6 @@ namespace Restaurant
 {
     public static class Inventory_Functions
     {
-        static public void Checking_Inventory()
-        {
-            LinkedList<Inventory_Food> list_food = Read_The_Inventory_From_File();
-            Console.WriteLine("The Inventory\n");
-            foreach (Inventory_Food food in list_food)
-            {
-                Console.WriteLine("@Name: " + food.getNameFood() + " " + "@Portions:" + food.getPortionFood());
-                Console.WriteLine("\n");
-            }
-        }
         static public LinkedList<Inventory_Food> Read_The_Inventory_From_File()
         {
             LinkedList<Inventory_Food> temp_List_In_Inventory = new LinkedList<Inventory_Food>();
@@ -43,121 +33,7 @@ namespace Restaurant
             }
             return temp_List_In_Inventory;
         }
-
-        static public bool Checking_Specific_Item_In_Inventory()
-        {
-            string name_item;
-            LinkedList<Inventory_Food> list_food = Read_The_Inventory_From_File();
-            int number_of_items = list_food.Count();
-            bool flag = false;
-            Inventory_Food find_item = new Inventory_Food();
-            Console.WriteLine("Please enter the name of the item you want to check correctly: ");
-            name_item = Console.ReadLine();
-            foreach (Inventory_Food food in list_food)
-            {
-                if (food.getNameFood() == name_item)
-                {
-                    find_item = food;
-                    flag = true;
-                    break;
-                }
-                else
-                {
-                    flag = false;
-                }
-            }
-            if (flag == true)
-            {
-                /* @ Using switch instead of else if statement for practice new method 
-                /* @ The Code below equal with 
-                /* @ if(find_item.getPortionFood() == 0 ){
-                /* @    Console.WriteLine("The item: " +find_item.getNameFood() + " is empty inside the fridge\n"); 
-                /* @ }
-                /* @ else{ 
-                /* @    Console.WriteLine("Found item in the fridge\n");
-                /* @    Console.WriteLine("@Name: " + find_item.getNameFood() + " " + "@Portions:" + find_item.getPortionFood());
-                /* @ }*/
-
-                switch (find_item.getPortionFood())
-                {
-                    case 0:
-                        Console.WriteLine("The item: " + find_item.getNameFood() + " is empty inside the fridge\n");
-                        break;
-                    default:
-                        Console.WriteLine("Found item in the fridge\n");
-                        Console.WriteLine("@Name: " + find_item.getNameFood() + " " + "@Portions:" + find_item.getPortionFood());
-                        break;
-                }
-                
-            }
-            else
-            {
-                
-                Console.WriteLine("The item not in the list\n");
-            }
-            return flag;
-            
-        }
-        static public void Modify_The_Inventory()
-        {
-            /* @ First Take the List from file */
-            LinkedList<Inventory_Food> list_food = Read_The_Inventory_From_File();
-
-            /* @ Print the inventory list */
-            Checking_Inventory();
-
-            /*            |@ Modify the inventory list @|                  */
-            /* @ 1. Take the name of the item(string) staff want to modify */
-            /* @ 2. Take the node of the input item from the list of food  */
-            /* @ 3. Take the portion(int) wants to modify                  */
-            /* @ 4. Modify the node in the list                            */
-
-            /* @ 1. Take the name of the item(string) staff want to modify */
-            Console.WriteLine("Enter the name of the item\n");
-            string name = Console.ReadLine();
-            /* @ 1. End*/
-
-            /* @ 2. Take the node of the input item from the list of food..*/
-            Inventory_Food item_modify = Node_From_List_by_name_of_Food_in_Inventory_List(name, list_food);
-            /* @ 2. End*/
-
-            if (item_modify != null)
-            {
-                /* @ 3. Take the portion(int) wants to modify..............*/
-                /* @ Just take the integer, Using while loop to check for  */
-                /* @ the input from user                                   */
-                bool isNumerical = false;
-                int portions = item_modify.getPortionFood();
-                while (isNumerical == false)
-                {
-                    Console.WriteLine("Enter the number of the items inside fridge: ");
-                    string input = Console.ReadLine();
-
-
-                    /* @ TryParse method will try to convert the string to a number (integer) and 
-                     * @ if it succeeds it will return true and 
-                     * @ place the corresponding number in myInt. 
-                     * @ If it can't, it returns false.........................................*/
-                    isNumerical = int.TryParse(input, out portions);
-
-                    /* @ Send message when receive wrong input */
-                    if (isNumerical == false) { Console.WriteLine("Wrong Input. Please enter integer\n"); }
-                }
-                /* @ 3. End*/
-
-                /* @ 4. Modify the node in the list........................*/
-                item_modify.setPortionFood(portions);
-                /* @ 4. End*/
-            }
-
-            /* @ Store the new inventory list to the file */
-            Store_The_Inventory_To_File(list_food);
-
-            /* @ Send the message to notice about the change */
-            Console.WriteLine("Modify the inventory successfully\n");
-
-        }
-        static public Inventory_Food Node_From_List_by_name_of_Food_in_Inventory_List(string name, LinkedList<Inventory_Food> list_food)
+        static public Inventory_Food Node_From_List_by_name_of_Food_in_Inventory_List(string name,LinkedList<Inventory_Food> list_food)
         {
             Inventory_Food found_item = new Inventory_Food();
             foreach (Inventory_Food item in list_food)
@@ -175,13 +51,6 @@ namespace Restaurant
         static public void Store_The_Inventory_To_File(LinkedList<Inventory_Food> list_food)
         {
             string filename = "Inventory.txt";
-            if (File.Exists(filename))
-            {
-                /* Delete the file if it exsist to update new information whenever write to file again */
-                File.Delete(filename);
-                File.Create(filename);
-            }
-            else if (!File.Exists(filename)) { File.Create(filename); }
 
             /* @ Loop thourgh all the list and write it into the file line by line */
             foreach (Inventory_Food item in list_food)

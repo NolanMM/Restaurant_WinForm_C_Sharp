@@ -17,9 +17,5 @@ namespace Restaurant
             public void setPortionFood(int portions) { Portions = portions; }
             public int getPortionFood() { return Portions; }
         }
-        public class Items
-        {
-            // Stub for Items
-        }
     }
 }

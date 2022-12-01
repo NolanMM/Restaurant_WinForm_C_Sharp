@@ -30,21 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Salary));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.Sunday = new System.Windows.Forms.Label();
-            this.Saturday = new System.Windows.Forms.Label();
-            this.Friday = new System.Windows.Forms.Label();
-            this.Thursday = new System.Windows.Forms.Label();
-            this.Wednesday = new System.Windows.Forms.Label();
-            this.Tuesday = new System.Windows.Forms.Label();
-            this.Monday = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.Exit_btn = new System.Windows.Forms.Button();
             this.About_btn = new System.Windows.Forms.Button();
@@ -61,34 +46,45 @@
             this.Menu_food_btn = new System.Windows.Forms.Button();
             this.Restaurant_btn = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.Payment_Period = new System.Windows.Forms.Label();
             this.Total_Salary = new System.Windows.Forms.Label();
             this.Rate_Per_Hour = new System.Windows.Forms.Label();
             this.Total_Working_Hour = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Sunday = new System.Windows.Forms.Label();
+            this.Saturday = new System.Windows.Forms.Label();
+            this.Friday = new System.Windows.Forms.Label();
+            this.Thursday = new System.Windows.Forms.Label();
+            this.Wednesday = new System.Windows.Forms.Label();
+            this.Tuesday = new System.Windows.Forms.Label();
+            this.Monday = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelSideMenu.SuspendLayout();
             this.panelProfileSubmenu.SuspendLayout();
             this.panelRestaurantSubmenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.Payment_Period);
+            this.panel1.Controls.Add(this.panelSideMenu);
             this.panel1.Controls.Add(this.Total_Salary);
             this.panel1.Controls.Add(this.Rate_Per_Hour);
             this.panel1.Controls.Add(this.Total_Working_Hour);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panelSideMenu);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
@@ -110,163 +106,6 @@
             this.panel1.Size = new System.Drawing.Size(1027, 562);
             this.panel1.TabIndex = 3;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(59, 499);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(113, 21);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Working Hour";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(58, 422);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(113, 21);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Working Hour";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(59, 339);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 21);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Working Hour";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(59, 254);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 21);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Working Hour";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(58, 172);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 21);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Working Hour";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(58, 100);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 21);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Working Hour";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(59, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 21);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Working Hour";
-            // 
-            // Sunday
-            // 
-            this.Sunday.AutoSize = true;
-            this.Sunday.BackColor = System.Drawing.Color.White;
-            this.Sunday.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sunday.Location = new System.Drawing.Point(62, 523);
-            this.Sunday.Name = "Sunday";
-            this.Sunday.Size = new System.Drawing.Size(49, 21);
-            this.Sunday.TabIndex = 11;
-            this.Sunday.Text = "Blank";
-            // 
-            // Saturday
-            // 
-            this.Saturday.AutoSize = true;
-            this.Saturday.BackColor = System.Drawing.Color.White;
-            this.Saturday.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Saturday.Location = new System.Drawing.Point(59, 440);
-            this.Saturday.Name = "Saturday";
-            this.Saturday.Size = new System.Drawing.Size(49, 21);
-            this.Saturday.TabIndex = 10;
-            this.Saturday.Text = "Blank";
-            // 
-            // Friday
-            // 
-            this.Friday.AutoSize = true;
-            this.Friday.BackColor = System.Drawing.Color.White;
-            this.Friday.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Friday.Location = new System.Drawing.Point(62, 364);
-            this.Friday.Name = "Friday";
-            this.Friday.Size = new System.Drawing.Size(49, 21);
-            this.Friday.TabIndex = 9;
-            this.Friday.Text = "Blank";
-            // 
-            // Thursday
-            // 
-            this.Thursday.AutoSize = true;
-            this.Thursday.BackColor = System.Drawing.Color.White;
-            this.Thursday.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Thursday.Location = new System.Drawing.Point(59, 284);
-            this.Thursday.Name = "Thursday";
-            this.Thursday.Size = new System.Drawing.Size(49, 21);
-            this.Thursday.TabIndex = 8;
-            this.Thursday.Text = "Blank";
-            // 
-            // Wednesday
-            // 
-            this.Wednesday.AutoSize = true;
-            this.Wednesday.BackColor = System.Drawing.Color.White;
-            this.Wednesday.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Wednesday.Location = new System.Drawing.Point(59, 197);
-            this.Wednesday.Name = "Wednesday";
-            this.Wednesday.Size = new System.Drawing.Size(49, 21);
-            this.Wednesday.TabIndex = 7;
-            this.Wednesday.Text = "Blank";
-            // 
-            // Tuesday
-            // 
-            this.Tuesday.AutoSize = true;
-            this.Tuesday.BackColor = System.Drawing.Color.White;
-            this.Tuesday.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tuesday.Location = new System.Drawing.Point(59, 117);
-            this.Tuesday.Name = "Tuesday";
-            this.Tuesday.Size = new System.Drawing.Size(49, 21);
-            this.Tuesday.TabIndex = 6;
-            this.Tuesday.Text = "Blank";
-            // 
-            // Monday
-            // 
-            this.Monday.AutoSize = true;
-            this.Monday.BackColor = System.Drawing.Color.White;
-            this.Monday.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Monday.Location = new System.Drawing.Point(59, 46);
-            this.Monday.Name = "Monday";
-            this.Monday.Size = new System.Drawing.Size(49, 21);
-            this.Monday.TabIndex = 5;
-            this.Monday.Text = "Blank";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(207, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(378, 562);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panelSideMenu
             // 
             this.panelSideMenu.AutoScroll = true;
@@ -283,7 +122,7 @@
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(218, 562);
-            this.panelSideMenu.TabIndex = 23;
+            this.panelSideMenu.TabIndex = 32;
             // 
             // Exit_btn
             // 
@@ -293,10 +132,10 @@
             this.Exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Exit_btn.Location = new System.Drawing.Point(0, 554);
+            this.Exit_btn.Location = new System.Drawing.Point(0, 550);
             this.Exit_btn.Name = "Exit_btn";
             this.Exit_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Exit_btn.Size = new System.Drawing.Size(201, 40);
+            this.Exit_btn.Size = new System.Drawing.Size(201, 43);
             this.Exit_btn.TabIndex = 6;
             this.Exit_btn.Text = "Exit";
             this.Exit_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -312,10 +151,10 @@
             this.About_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.About_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.About_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.About_btn.Location = new System.Drawing.Point(0, 509);
+            this.About_btn.Location = new System.Drawing.Point(0, 507);
             this.About_btn.Name = "About_btn";
             this.About_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.About_btn.Size = new System.Drawing.Size(201, 45);
+            this.About_btn.Size = new System.Drawing.Size(201, 43);
             this.About_btn.TabIndex = 5;
             this.About_btn.Text = "About";
             this.About_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -334,7 +173,7 @@
             this.Help_btn.Location = new System.Drawing.Point(0, 464);
             this.Help_btn.Name = "Help_btn";
             this.Help_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Help_btn.Size = new System.Drawing.Size(201, 45);
+            this.Help_btn.Size = new System.Drawing.Size(201, 43);
             this.Help_btn.TabIndex = 4;
             this.Help_btn.Text = "Help";
             this.Help_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -546,18 +385,6 @@
             this.panelLogo.Size = new System.Drawing.Size(201, 88);
             this.panelLogo.TabIndex = 0;
             // 
-            // Payment_Period
-            // 
-            this.Payment_Period.AutoSize = true;
-            this.Payment_Period.BackColor = System.Drawing.Color.Transparent;
-            this.Payment_Period.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Payment_Period.ForeColor = System.Drawing.Color.IndianRed;
-            this.Payment_Period.Location = new System.Drawing.Point(686, 282);
-            this.Payment_Period.Name = "Payment_Period";
-            this.Payment_Period.Size = new System.Drawing.Size(53, 29);
-            this.Payment_Period.TabIndex = 31;
-            this.Payment_Period.Text = "N/A";
-            // 
             // Total_Salary
             // 
             this.Total_Salary.AutoSize = true;
@@ -593,18 +420,6 @@
             this.Total_Working_Hour.Size = new System.Drawing.Size(53, 29);
             this.Total_Working_Hour.TabIndex = 28;
             this.Total_Working_Hour.Text = "N/A";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(681, 253);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(184, 29);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Payment Period";
             // 
             // label
             // 
@@ -642,6 +457,163 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Total Working Hour";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(256, 495);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(113, 21);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Working Hour";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(256, 417);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(113, 21);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Working Hour";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(256, 334);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(113, 21);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Working Hour";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(256, 250);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(113, 21);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Working Hour";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(256, 171);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(113, 21);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Working Hour";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(256, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 21);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Working Hour";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(256, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(113, 21);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Working Hour";
+            // 
+            // Sunday
+            // 
+            this.Sunday.AutoSize = true;
+            this.Sunday.BackColor = System.Drawing.Color.White;
+            this.Sunday.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sunday.Location = new System.Drawing.Point(256, 516);
+            this.Sunday.Name = "Sunday";
+            this.Sunday.Size = new System.Drawing.Size(49, 21);
+            this.Sunday.TabIndex = 11;
+            this.Sunday.Text = "Blank";
+            // 
+            // Saturday
+            // 
+            this.Saturday.AutoSize = true;
+            this.Saturday.BackColor = System.Drawing.Color.White;
+            this.Saturday.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Saturday.Location = new System.Drawing.Point(256, 438);
+            this.Saturday.Name = "Saturday";
+            this.Saturday.Size = new System.Drawing.Size(49, 21);
+            this.Saturday.TabIndex = 10;
+            this.Saturday.Text = "Blank";
+            // 
+            // Friday
+            // 
+            this.Friday.AutoSize = true;
+            this.Friday.BackColor = System.Drawing.Color.White;
+            this.Friday.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Friday.Location = new System.Drawing.Point(256, 355);
+            this.Friday.Name = "Friday";
+            this.Friday.Size = new System.Drawing.Size(49, 21);
+            this.Friday.TabIndex = 9;
+            this.Friday.Text = "Blank";
+            // 
+            // Thursday
+            // 
+            this.Thursday.AutoSize = true;
+            this.Thursday.BackColor = System.Drawing.Color.White;
+            this.Thursday.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Thursday.Location = new System.Drawing.Point(256, 279);
+            this.Thursday.Name = "Thursday";
+            this.Thursday.Size = new System.Drawing.Size(49, 21);
+            this.Thursday.TabIndex = 8;
+            this.Thursday.Text = "Blank";
+            // 
+            // Wednesday
+            // 
+            this.Wednesday.AutoSize = true;
+            this.Wednesday.BackColor = System.Drawing.Color.White;
+            this.Wednesday.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Wednesday.Location = new System.Drawing.Point(256, 198);
+            this.Wednesday.Name = "Wednesday";
+            this.Wednesday.Size = new System.Drawing.Size(49, 21);
+            this.Wednesday.TabIndex = 7;
+            this.Wednesday.Text = "Blank";
+            // 
+            // Tuesday
+            // 
+            this.Tuesday.AutoSize = true;
+            this.Tuesday.BackColor = System.Drawing.Color.White;
+            this.Tuesday.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tuesday.Location = new System.Drawing.Point(256, 112);
+            this.Tuesday.Name = "Tuesday";
+            this.Tuesday.Size = new System.Drawing.Size(49, 21);
+            this.Tuesday.TabIndex = 6;
+            this.Tuesday.Text = "Blank";
+            // 
+            // Monday
+            // 
+            this.Monday.AutoSize = true;
+            this.Monday.BackColor = System.Drawing.Color.White;
+            this.Monday.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Monday.Location = new System.Drawing.Point(256, 42);
+            this.Monday.Name = "Monday";
+            this.Monday.Size = new System.Drawing.Size(49, 21);
+            this.Monday.TabIndex = 5;
+            this.Monday.Text = "Blank";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(212, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(378, 562);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Salary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -651,12 +623,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Salary";
             this.Text = "Salary";
+            this.Load += new System.EventHandler(this.Salary_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelSideMenu.ResumeLayout(false);
             this.panelProfileSubmenu.ResumeLayout(false);
             this.panelRestaurantSubmenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -678,11 +651,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label Payment_Period;
         private System.Windows.Forms.Label Total_Salary;
         private System.Windows.Forms.Label Rate_Per_Hour;
         private System.Windows.Forms.Label Total_Working_Hour;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
