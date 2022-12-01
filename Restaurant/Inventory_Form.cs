@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +32,7 @@ namespace Restaurant
                 ListViewItem item = new ListViewItem();
                 item.Text = food.getNameFood();
                 listView_inventory.Items.Add(item);
-
+                
                 ListViewItem.ListViewSubItem subItem = new ListViewItem.ListViewSubItem(item, food.getPortionFood().ToString());
                 item.SubItems.Add(subItem);
             }
@@ -53,7 +54,7 @@ namespace Restaurant
                 listView_inventory.Items.Add(item);
 
                 ListViewItem.ListViewSubItem subitem = new ListViewItem.ListViewSubItem(item, (Portion_box.Text));
-                food.setPortionFood(Convert.ToInt16(Portion_box.Text));
+                food.setPortionFood(Convert.ToInt32(Portion_box.Text));
                 item.SubItems.Add(subitem);
                 temp.AddFirst(food);
 
@@ -73,12 +74,23 @@ namespace Restaurant
                 {
                     LinkedList<Inventory_Food> temp = Inventory_Functions.Read_The_Inventory_From_File();
                     Inventory_Food temp_node = Inventory_Functions.Node_From_List_by_name_of_Food_in_Inventory_List(listView_inventory.SelectedItems[0].Text, temp);
+                    temp.Remove(temp_node);
                     temp_node.setNameFood(Name_Food_box.Text);
-                    temp_node.setPortionFood(Convert.ToInt16(Portion_box.Text));
-                    listView_inventory.SelectedItems[0].Text = Name_Food_box.Text;
-                    listView_inventory.SelectedItems[0].SubItems.Clear();
-                    listView_inventory.SelectedItems[0].SubItems.Add(Portion_box.Text);
+                    temp_node.setPortionFood(Convert.ToInt32(Portion_box.Text));
+                    temp.AddFirst(temp_node);
+                    listView_inventory.Items.Remove(listView_inventory.SelectedItems[0]);
+
+                    ListViewItem item = new ListViewItem();
+                    item.Text = Name_Food_box.Text;
+                    listView_inventory.Items.Add(item);
+
+                    //listView_inventory.SelectedItems[0].Text = Name_Food_box.Text;
+                    ListViewItem.ListViewSubItem subitem = new ListViewItem.ListViewSubItem(item, (Portion_box.Text));
+                    item.SubItems.Add(subitem);
                     Inventory_Functions.Store_The_Inventory_To_File(temp);
+                    Name_Food_box.Clear();
+                    Portion_box.Clear();
+                    Name_Food_box.Focus();
                 }
             }
             else MessageBox.Show("Error when delete");
@@ -91,10 +103,12 @@ namespace Restaurant
                 DialogResult dl = MessageBox.Show("Do you want to delete the item", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (dl == DialogResult.OK)
                 {
+                    StreamWriter strm = File.CreateText("Inventory.txt");
+                    strm.Flush();
+                    strm.Close();
                     LinkedList<Inventory_Food> temp = Inventory_Functions.Read_The_Inventory_From_File();
-                    Inventory_Food temp_node = new Inventory_Food();
-                    temp_node.setNameFood(listView_inventory.SelectedItems[0].Text);
-                    temp_node.setPortionFood(Convert.ToInt16(listView_inventory.SelectedItems[0].SubItems.ToString()));
+                    Inventory_Food temp_node = Inventory_Functions.Node_From_List_by_name_of_Food_in_Inventory_List(listView_inventory.SelectedItems[0].Text,temp);
+                    bool test = temp.Remove(temp_node);
                     temp.Remove(temp_node);
                     listView_inventory.Items.Remove(listView_inventory.SelectedItems[0]);
                     Inventory_Functions.Store_The_Inventory_To_File(temp);

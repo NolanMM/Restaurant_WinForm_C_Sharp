@@ -190,15 +190,15 @@ namespace Restaurant
                     {
                         case 1:
                             isNumerical = true;
-                            Inventory_Functions.Checking_Inventory();
+                            //Inventory_Functions.Checking_Inventory();
                             break;
                         case 2:
                             isNumerical = true;
-                            bool check = Inventory_Functions.Checking_Specific_Item_In_Inventory();
+                            //bool check = Inventory_Functions.Checking_Specific_Item_In_Inventory();
                             break;
                         case 3:
                             isNumerical = true;
-                            Inventory_Functions.Modify_The_Inventory();
+                            //Inventory_Functions.Modify_The_Inventory();
                             break;
                         case 4:
                             isNumerical = true;

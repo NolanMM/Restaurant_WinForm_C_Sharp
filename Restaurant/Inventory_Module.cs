@@ -11,8 +11,7 @@ namespace Restaurant
         static public LinkedList<Inventory_Food> Read_The_Inventory_From_File()
         {
             LinkedList<Inventory_Food> temp_List_In_Inventory = new LinkedList<Inventory_Food>();
-            Inventory_Food inventory_Food_node = new Inventory_Food();
-
+            
             /* @ Loop through all the line in the file...................................*/
             var lines = File.ReadLines("Inventory.txt");
             foreach (var line in lines)
@@ -20,7 +19,7 @@ namespace Restaurant
                 /* Store the Name of the food in the Split_List_Item_Food[0] (String)....*/
                 /* Store the Portion of the food in the Split_List_Item_Food[1] (String).*/
                 string[] Split_List_Item_Food = line.Split('-');
-
+                Inventory_Food inventory_Food_node = new Inventory_Food();
                 /* Store information of the food into the node of the list of the food...*/
                 inventory_Food_node.setNameFood(Split_List_Item_Food[0]);
                 bool temp1 = int.TryParse(Split_List_Item_Food[1], out int Portions);
@@ -51,14 +50,17 @@ namespace Restaurant
         static public void Store_The_Inventory_To_File(LinkedList<Inventory_Food> list_food)
         {
             string filename = "Inventory.txt";
-
+            int counter = list_food.Count();
+            int i = 0;
+            string[] inventory_line = new string[counter];
             /* @ Loop thourgh all the list and write it into the file line by line */
             foreach (Inventory_Food item in list_food)
             {
                 /* @ The inventory_line layout is "Name_Of_Food-Portion_Number" */
-                string inventory_line = item.getNameFood() + "-" + item.getPortionFood().ToString();
-                File.WriteAllText(filename, inventory_line);
+                inventory_line[i] = item.getNameFood() + "-" + item.getPortionFood().ToString();
+                i++;
             }
+            File.WriteAllLines(filename, inventory_line);
         }
     }
 }

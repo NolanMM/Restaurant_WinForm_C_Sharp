@@ -481,6 +481,7 @@
             this.listView_inventory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Name_of_Food,
             this.Portion_Left});
+            this.listView_inventory.ForeColor = System.Drawing.Color.White;
             this.listView_inventory.GridLines = true;
             this.listView_inventory.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView_inventory.HideSelection = false;
