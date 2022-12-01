@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager_Form));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.Exit_btn = new System.Windows.Forms.Button();
             this.About_btn = new System.Windows.Forms.Button();
@@ -44,9 +45,14 @@
             this.Menu_food_btn = new System.Windows.Forms.Button();
             this.Restaurant_btn = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelSideMenu.SuspendLayout();
             this.panelProfileSubmenu.SuspendLayout();
             this.panelRestaurantSubmenu.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -75,10 +81,10 @@
             this.Exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Exit_btn.Location = new System.Drawing.Point(0, 547);
+            this.Exit_btn.Location = new System.Drawing.Point(0, 631);
             this.Exit_btn.Name = "Exit_btn";
             this.Exit_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Exit_btn.Size = new System.Drawing.Size(218, 51);
+            this.Exit_btn.Size = new System.Drawing.Size(201, 42);
             this.Exit_btn.TabIndex = 6;
             this.Exit_btn.Text = "Exit";
             this.Exit_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -94,10 +100,10 @@
             this.About_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.About_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.About_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.About_btn.Location = new System.Drawing.Point(0, 502);
+            this.About_btn.Location = new System.Drawing.Point(0, 586);
             this.About_btn.Name = "About_btn";
             this.About_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.About_btn.Size = new System.Drawing.Size(218, 45);
+            this.About_btn.Size = new System.Drawing.Size(201, 45);
             this.About_btn.TabIndex = 5;
             this.About_btn.Text = "About";
             this.About_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,10 +119,10 @@
             this.Help_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Help_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Help_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Help_btn.Location = new System.Drawing.Point(0, 457);
+            this.Help_btn.Location = new System.Drawing.Point(0, 541);
             this.Help_btn.Name = "Help_btn";
             this.Help_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Help_btn.Size = new System.Drawing.Size(218, 45);
+            this.Help_btn.Size = new System.Drawing.Size(201, 45);
             this.Help_btn.TabIndex = 4;
             this.Help_btn.Text = "Help";
             this.Help_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -129,9 +135,9 @@
             this.panelProfileSubmenu.Controls.Add(this.Timetable_btn);
             this.panelProfileSubmenu.Controls.Add(this.Salary_btn);
             this.panelProfileSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProfileSubmenu.Location = new System.Drawing.Point(0, 334);
+            this.panelProfileSubmenu.Location = new System.Drawing.Point(0, 418);
             this.panelProfileSubmenu.Name = "panelProfileSubmenu";
-            this.panelProfileSubmenu.Size = new System.Drawing.Size(218, 123);
+            this.panelProfileSubmenu.Size = new System.Drawing.Size(201, 123);
             this.panelProfileSubmenu.TabIndex = 3;
             // 
             // Change_password_btn
@@ -146,8 +152,8 @@
             this.Change_password_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.Change_password_btn.Location = new System.Drawing.Point(0, 80);
             this.Change_password_btn.Name = "Change_password_btn";
-            this.Change_password_btn.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.Change_password_btn.Size = new System.Drawing.Size(218, 43);
+            this.Change_password_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Change_password_btn.Size = new System.Drawing.Size(201, 43);
             this.Change_password_btn.TabIndex = 2;
             this.Change_password_btn.Text = "III. Change Password";
             this.Change_password_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -165,8 +171,8 @@
             this.Timetable_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.Timetable_btn.Location = new System.Drawing.Point(0, 40);
             this.Timetable_btn.Name = "Timetable_btn";
-            this.Timetable_btn.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.Timetable_btn.Size = new System.Drawing.Size(218, 40);
+            this.Timetable_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Timetable_btn.Size = new System.Drawing.Size(201, 40);
             this.Timetable_btn.TabIndex = 1;
             this.Timetable_btn.Text = "II. Timetable";
             this.Timetable_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -184,8 +190,8 @@
             this.Salary_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.Salary_btn.Location = new System.Drawing.Point(0, 0);
             this.Salary_btn.Name = "Salary_btn";
-            this.Salary_btn.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.Salary_btn.Size = new System.Drawing.Size(218, 40);
+            this.Salary_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Salary_btn.Size = new System.Drawing.Size(201, 40);
             this.Salary_btn.TabIndex = 0;
             this.Salary_btn.Text = "I.  Salary";
             this.Salary_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -201,10 +207,10 @@
             this.Profile_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Profile_btn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.Profile_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Profile_btn.Location = new System.Drawing.Point(0, 289);
+            this.Profile_btn.Location = new System.Drawing.Point(0, 373);
             this.Profile_btn.Name = "Profile_btn";
             this.Profile_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Profile_btn.Size = new System.Drawing.Size(218, 45);
+            this.Profile_btn.Size = new System.Drawing.Size(201, 45);
             this.Profile_btn.TabIndex = 2;
             this.Profile_btn.Text = "Profile";
             this.Profile_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,6 +219,8 @@
             // panelRestaurantSubmenu
             // 
             this.panelRestaurantSubmenu.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panelRestaurantSubmenu.Controls.Add(this.button3);
+            this.panelRestaurantSubmenu.Controls.Add(this.button2);
             this.panelRestaurantSubmenu.Controls.Add(this.button1);
             this.panelRestaurantSubmenu.Controls.Add(this.Security_btn);
             this.panelRestaurantSubmenu.Controls.Add(this.Inventory_btn);
@@ -220,7 +228,7 @@
             this.panelRestaurantSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRestaurantSubmenu.Location = new System.Drawing.Point(0, 133);
             this.panelRestaurantSubmenu.Name = "panelRestaurantSubmenu";
-            this.panelRestaurantSubmenu.Size = new System.Drawing.Size(218, 156);
+            this.panelRestaurantSubmenu.Size = new System.Drawing.Size(201, 240);
             this.panelRestaurantSubmenu.TabIndex = 1;
             // 
             // button1
@@ -235,8 +243,8 @@
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Location = new System.Drawing.Point(0, 120);
             this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(218, 40);
+            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(201, 40);
             this.button1.TabIndex = 3;
             this.button1.Text = "IV. Financial";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -254,8 +262,8 @@
             this.Security_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Security_btn.Location = new System.Drawing.Point(0, 80);
             this.Security_btn.Name = "Security_btn";
-            this.Security_btn.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.Security_btn.Size = new System.Drawing.Size(218, 40);
+            this.Security_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Security_btn.Size = new System.Drawing.Size(201, 40);
             this.Security_btn.TabIndex = 2;
             this.Security_btn.Text = "III. Security";
             this.Security_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -273,8 +281,8 @@
             this.Inventory_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Inventory_btn.Location = new System.Drawing.Point(0, 40);
             this.Inventory_btn.Name = "Inventory_btn";
-            this.Inventory_btn.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.Inventory_btn.Size = new System.Drawing.Size(218, 40);
+            this.Inventory_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Inventory_btn.Size = new System.Drawing.Size(201, 40);
             this.Inventory_btn.TabIndex = 1;
             this.Inventory_btn.Text = "II.  Inventory";
             this.Inventory_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -292,8 +300,8 @@
             this.Menu_food_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Menu_food_btn.Location = new System.Drawing.Point(0, 0);
             this.Menu_food_btn.Name = "Menu_food_btn";
-            this.Menu_food_btn.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.Menu_food_btn.Size = new System.Drawing.Size(218, 40);
+            this.Menu_food_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Menu_food_btn.Size = new System.Drawing.Size(201, 40);
             this.Menu_food_btn.TabIndex = 0;
             this.Menu_food_btn.Text = "I.   Menu Food";
             this.Menu_food_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -313,7 +321,7 @@
             this.Restaurant_btn.Location = new System.Drawing.Point(0, 88);
             this.Restaurant_btn.Name = "Restaurant_btn";
             this.Restaurant_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Restaurant_btn.Size = new System.Drawing.Size(218, 45);
+            this.Restaurant_btn.Size = new System.Drawing.Size(201, 45);
             this.Restaurant_btn.TabIndex = 0;
             this.Restaurant_btn.Text = "Restaurant";
             this.Restaurant_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -325,14 +333,76 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(218, 88);
+            this.panelLogo.Size = new System.Drawing.Size(201, 88);
             this.panelLogo.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(218, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(825, 601);
+            this.panel1.TabIndex = 3;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(0, 160);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(201, 40);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "V.  Staff List";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Location = new System.Drawing.Point(0, 200);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(201, 40);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "VI. Salary List";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(140, 253);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(576, 86);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Welcome Manager";
             // 
             // Manager_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1043, 601);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelSideMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Manager_Form";
@@ -341,6 +411,8 @@
             this.panelSideMenu.ResumeLayout(false);
             this.panelProfileSubmenu.ResumeLayout(false);
             this.panelRestaurantSubmenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -363,5 +435,9 @@
         private System.Windows.Forms.Button Menu_food_btn;
         private System.Windows.Forms.Button Restaurant_btn;
         private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }

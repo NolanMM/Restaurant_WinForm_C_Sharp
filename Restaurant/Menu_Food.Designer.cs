@@ -217,7 +217,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(315, 14);
+            this.label1.Location = new System.Drawing.Point(581, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 86);
             this.label1.TabIndex = 6;
