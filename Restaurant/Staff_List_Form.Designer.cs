@@ -48,6 +48,24 @@
             this.Restaurant_btn = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Salary_Box = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Password_box = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Username_box = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Lastname_box = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Modify_btn = new System.Windows.Forms.Button();
+            this.Delete_btn = new System.Windows.Forms.Button();
+            this.Add_btn = new System.Windows.Forms.Button();
+            this.firstname_box = new System.Windows.Forms.TextBox();
+            this.Recovery_Email_box = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.listView_staff = new System.Windows.Forms.ListView();
             this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -56,24 +74,6 @@
             this.role = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.recovery_email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Salary = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Modify_btn = new System.Windows.Forms.Button();
-            this.Delete_btn = new System.Windows.Forms.Button();
-            this.Add_btn = new System.Windows.Forms.Button();
-            this.firstname_box = new System.Windows.Forms.TextBox();
-            this.Name_Food_box = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Lastname_box = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panelSideMenu.SuspendLayout();
             this.panelProfileSubmenu.SuspendLayout();
             this.panelRestaurantSubmenu.SuspendLayout();
@@ -405,11 +405,11 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.Salary_Box);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.Password_box);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.Username_box);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.Lastname_box);
             this.panel1.Controls.Add(this.label4);
@@ -417,7 +417,7 @@
             this.panel1.Controls.Add(this.Delete_btn);
             this.panel1.Controls.Add(this.Add_btn);
             this.panel1.Controls.Add(this.firstname_box);
-            this.panel1.Controls.Add(this.Name_Food_box);
+            this.panel1.Controls.Add(this.Recovery_Email_box);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -428,65 +428,120 @@
             this.panel1.Size = new System.Drawing.Size(809, 562);
             this.panel1.TabIndex = 4;
             // 
-            // listView_staff
+            // comboBox1
             // 
-            this.listView_staff.BackColor = System.Drawing.Color.Black;
-            this.listView_staff.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("listView_staff.BackgroundImage")));
-            this.listView_staff.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView_staff.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.FirstName,
-            this.LastName,
-            this.username,
-            this.password,
-            this.role,
-            this.recovery_email,
-            this.Salary});
-            this.listView_staff.GridLines = true;
-            this.listView_staff.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView_staff.HideSelection = false;
-            this.listView_staff.Location = new System.Drawing.Point(41, 88);
-            this.listView_staff.MultiSelect = false;
-            this.listView_staff.Name = "listView_staff";
-            this.listView_staff.Size = new System.Drawing.Size(723, 226);
-            this.listView_staff.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.listView_staff.TabIndex = 2;
-            this.listView_staff.UseCompatibleStateImageBehavior = false;
-            this.listView_staff.View = System.Windows.Forms.View.Details;
+            this.comboBox1.BackColor = System.Drawing.Color.Black;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F);
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(382, 366);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 27);
+            this.comboBox1.TabIndex = 30;
             // 
-            // FirstName
+            // label8
             // 
-            this.FirstName.Text = "FirstName";
-            this.FirstName.Width = 70;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.IndianRed;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label8.Location = new System.Drawing.Point(385, 333);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 30);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Role";
             // 
-            // LastName
+            // Salary_Box
             // 
-            this.LastName.Text = "LastName";
-            this.LastName.Width = 70;
+            this.Salary_Box.BackColor = System.Drawing.SystemColors.InfoText;
+            this.Salary_Box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Salary_Box.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Salary_Box.ForeColor = System.Drawing.Color.White;
+            this.Salary_Box.Location = new System.Drawing.Point(385, 457);
+            this.Salary_Box.Name = "Salary_Box";
+            this.Salary_Box.Size = new System.Drawing.Size(118, 27);
+            this.Salary_Box.TabIndex = 27;
             // 
-            // username
+            // label7
             // 
-            this.username.Text = "Username";
-            this.username.Width = 120;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.IndianRed;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label7.Location = new System.Drawing.Point(390, 424);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 30);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Salary";
             // 
-            // password
+            // Password_box
             // 
-            this.password.Text = "Password";
-            this.password.Width = 120;
+            this.Password_box.BackColor = System.Drawing.SystemColors.InfoText;
+            this.Password_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Password_box.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password_box.ForeColor = System.Drawing.Color.White;
+            this.Password_box.Location = new System.Drawing.Point(186, 457);
+            this.Password_box.Name = "Password_box";
+            this.Password_box.Size = new System.Drawing.Size(118, 27);
+            this.Password_box.TabIndex = 25;
             // 
-            // role
+            // label6
             // 
-            this.role.Text = "Role";
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.IndianRed;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label6.Location = new System.Drawing.Point(191, 424);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 30);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Password";
             // 
-            // recovery_email
+            // Username_box
             // 
-            this.recovery_email.DisplayIndex = 6;
-            this.recovery_email.Text = "Recovery Email";
-            this.recovery_email.Width = 220;
+            this.Username_box.BackColor = System.Drawing.SystemColors.InfoText;
+            this.Username_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Username_box.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username_box.ForeColor = System.Drawing.Color.White;
+            this.Username_box.Location = new System.Drawing.Point(186, 366);
+            this.Username_box.Name = "Username_box";
+            this.Username_box.Size = new System.Drawing.Size(118, 27);
+            this.Username_box.TabIndex = 23;
             // 
-            // Salary
+            // label5
             // 
-            this.Salary.DisplayIndex = 5;
-            this.Salary.Text = "Salary";
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.IndianRed;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label5.Location = new System.Drawing.Point(191, 333);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 30);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Username";
+            // 
+            // Lastname_box
+            // 
+            this.Lastname_box.BackColor = System.Drawing.SystemColors.InfoText;
+            this.Lastname_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lastname_box.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lastname_box.ForeColor = System.Drawing.Color.White;
+            this.Lastname_box.Location = new System.Drawing.Point(10, 457);
+            this.Lastname_box.Name = "Lastname_box";
+            this.Lastname_box.Size = new System.Drawing.Size(118, 27);
+            this.Lastname_box.TabIndex = 21;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.IndianRed;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label4.Location = new System.Drawing.Point(15, 424);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 30);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "LastName";
             // 
             // Modify_btn
             // 
@@ -538,16 +593,16 @@
             this.firstname_box.Size = new System.Drawing.Size(118, 27);
             this.firstname_box.TabIndex = 16;
             // 
-            // Name_Food_box
+            // Recovery_Email_box
             // 
-            this.Name_Food_box.BackColor = System.Drawing.SystemColors.InfoText;
-            this.Name_Food_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Name_Food_box.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name_Food_box.ForeColor = System.Drawing.Color.White;
-            this.Name_Food_box.Location = new System.Drawing.Point(539, 366);
-            this.Name_Food_box.Name = "Name_Food_box";
-            this.Name_Food_box.Size = new System.Drawing.Size(225, 27);
-            this.Name_Food_box.TabIndex = 15;
+            this.Recovery_Email_box.BackColor = System.Drawing.SystemColors.InfoText;
+            this.Recovery_Email_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Recovery_Email_box.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Recovery_Email_box.ForeColor = System.Drawing.Color.White;
+            this.Recovery_Email_box.Location = new System.Drawing.Point(539, 366);
+            this.Recovery_Email_box.Name = "Recovery_Email_box";
+            this.Recovery_Email_box.Size = new System.Drawing.Size(225, 27);
+            this.Recovery_Email_box.TabIndex = 15;
             // 
             // label3
             // 
@@ -585,119 +640,66 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Staff List";
             // 
-            // Lastname_box
+            // listView_staff
             // 
-            this.Lastname_box.BackColor = System.Drawing.SystemColors.InfoText;
-            this.Lastname_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lastname_box.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lastname_box.ForeColor = System.Drawing.Color.White;
-            this.Lastname_box.Location = new System.Drawing.Point(10, 457);
-            this.Lastname_box.Name = "Lastname_box";
-            this.Lastname_box.Size = new System.Drawing.Size(118, 27);
-            this.Lastname_box.TabIndex = 21;
+            this.listView_staff.BackColor = System.Drawing.Color.Black;
+            this.listView_staff.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("listView_staff.BackgroundImage")));
+            this.listView_staff.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView_staff.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.FirstName,
+            this.LastName,
+            this.username,
+            this.password,
+            this.role,
+            this.recovery_email,
+            this.Salary});
+            this.listView_staff.ForeColor = System.Drawing.Color.White;
+            this.listView_staff.GridLines = true;
+            this.listView_staff.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView_staff.HideSelection = false;
+            this.listView_staff.Location = new System.Drawing.Point(41, 88);
+            this.listView_staff.MultiSelect = false;
+            this.listView_staff.Name = "listView_staff";
+            this.listView_staff.Size = new System.Drawing.Size(723, 226);
+            this.listView_staff.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.listView_staff.TabIndex = 2;
+            this.listView_staff.UseCompatibleStateImageBehavior = false;
+            this.listView_staff.View = System.Windows.Forms.View.Details;
             // 
-            // label4
+            // FirstName
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.IndianRed;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label4.Location = new System.Drawing.Point(15, 424);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 30);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "LastName";
+            this.FirstName.Text = "FirstName";
+            this.FirstName.Width = 70;
             // 
-            // textBox2
+            // LastName
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.InfoText;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(186, 366);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(118, 27);
-            this.textBox2.TabIndex = 23;
+            this.LastName.Text = "LastName";
+            this.LastName.Width = 70;
             // 
-            // label5
+            // username
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.IndianRed;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label5.Location = new System.Drawing.Point(191, 333);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 30);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Username";
+            this.username.Text = "Username";
+            this.username.Width = 120;
             // 
-            // textBox3
+            // password
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.InfoText;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(186, 457);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(118, 27);
-            this.textBox3.TabIndex = 25;
+            this.password.Text = "Password";
+            this.password.Width = 120;
             // 
-            // label6
+            // role
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.IndianRed;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label6.Location = new System.Drawing.Point(191, 424);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 30);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Password";
+            this.role.Text = "Role";
             // 
-            // textBox4
+            // recovery_email
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.InfoText;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(385, 457);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(118, 27);
-            this.textBox4.TabIndex = 27;
+            this.recovery_email.DisplayIndex = 6;
+            this.recovery_email.Text = "Recovery Email";
+            this.recovery_email.Width = 220;
             // 
-            // label7
+            // Salary
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.IndianRed;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label7.Location = new System.Drawing.Point(390, 424);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 30);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Salary";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.IndianRed;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label8.Location = new System.Drawing.Point(385, 333);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 30);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "Role";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.Black;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(382, 366);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 27);
-            this.comboBox1.TabIndex = 30;
+            this.Salary.DisplayIndex = 5;
+            this.Salary.Text = "Salary";
             // 
             // Staff_List_Form
             // 
@@ -750,11 +752,11 @@
         private System.Windows.Forms.ColumnHeader Salary;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label8;
-        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox Salary_Box;
         private System.Windows.Forms.Label label7;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox Password_box;
         private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox Username_box;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox Lastname_box;
         private System.Windows.Forms.Label label4;
@@ -762,7 +764,7 @@
         public System.Windows.Forms.Button Delete_btn;
         public System.Windows.Forms.Button Add_btn;
         public System.Windows.Forms.TextBox firstname_box;
-        public System.Windows.Forms.TextBox Name_Food_box;
+        public System.Windows.Forms.TextBox Recovery_Email_box;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

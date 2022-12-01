@@ -102,13 +102,14 @@ namespace Restaurant
 
         static public LinkedList<Staff_Login> Create_Read_Account_Login_List()
         {
-            Staff_Login temp = new Staff_Login();
+            
             Staff_Login temp_login = new Staff_Login();
             LinkedList<Staff_Login> list_Account = new LinkedList<Staff_Login>();
             string filename = "Login.txt";
             var lines = File.ReadLines(filename);
             foreach (string line in lines)
                 {
+                Staff_Login temp = new Staff_Login();
                 string raw = Encrypted_Login.Decrypt(line);
                 string[] Split_List_Item = raw.Split('-');
 
@@ -130,7 +131,6 @@ namespace Restaurant
 
                 list_Account.AddFirst(temp);
             }
-            Console.WriteLine(temp.getRecovery());
             return list_Account;
         }
 
@@ -263,7 +263,9 @@ namespace Restaurant
         {
             /*@ Assign the file */
             string filename = "Login.txt";
-            File.Delete(filename);
+            int counter = list_account.Count();
+            int i = 0;
+            string[] staff_line = new string[counter];
             /*@ Check the number of items inside the list*/
             if (list_account.Count() == 0)
             {
@@ -276,11 +278,14 @@ namespace Restaurant
             {
                 string Write_to_File_Format = staff.getUserName() + "-" + staff.getPassword() + "-" + staff.get_First_Name() + "-" + staff.get_Last_Name() + "-" + staff.get_Role() + "-" + staff.get_Salary().ToString() + "-"
                    + staff.getRecovery();
-                string str_encrypted = Encrypted_Login.Encrypt(Write_to_File_Format);
-                    File.WriteAllText(filename, str_encrypted);
+                staff_line[i] = Encrypted_Login.Encrypt(Write_to_File_Format);
+                i++;
+                    
             }
+            File.WriteAllLines(filename, staff_line);
             return true;
 
         }
+      
     }
 }
