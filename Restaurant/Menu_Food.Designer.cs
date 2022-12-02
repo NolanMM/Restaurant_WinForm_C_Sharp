@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Food));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.Exit_btn = new System.Windows.Forms.Button();
             this.About_btn = new System.Windows.Forms.Button();
@@ -47,9 +48,22 @@
             this.Restaurant_btn = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelcenter = new System.Windows.Forms.Panel();
+            this.paneltop = new System.Windows.Forms.Panel();
+            this.panelLeft = new System.Windows.Forms.Panel();
+            this.panels = new System.Windows.Forms.Panel();
+            this.Drink_btn = new System.Windows.Forms.Button();
+            this.Food_btn = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelslide = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelSideMenu.SuspendLayout();
             this.panelProfileSubmenu.SuspendLayout();
             this.panelRestaurantSubmenu.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.paneltop.SuspendLayout();
+            this.panelLeft.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -387,11 +401,126 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panelcenter);
+            this.panel1.Controls.Add(this.paneltop);
+            this.panel1.Controls.Add(this.panelLeft);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(201, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(842, 601);
             this.panel1.TabIndex = 18;
+            // 
+            // panelcenter
+            // 
+            this.panelcenter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelcenter.BackgroundImage")));
+            this.panelcenter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelcenter.Location = new System.Drawing.Point(135, 88);
+            this.panelcenter.Name = "panelcenter";
+            this.panelcenter.Size = new System.Drawing.Size(707, 513);
+            this.panelcenter.TabIndex = 2;
+            // 
+            // paneltop
+            // 
+            this.paneltop.BackColor = System.Drawing.Color.Black;
+            this.paneltop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("paneltop.BackgroundImage")));
+            this.paneltop.Controls.Add(this.label1);
+            this.paneltop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paneltop.Location = new System.Drawing.Point(135, 0);
+            this.paneltop.Name = "paneltop";
+            this.paneltop.Size = new System.Drawing.Size(707, 88);
+            this.paneltop.TabIndex = 1;
+            // 
+            // panelLeft
+            // 
+            this.panelLeft.BackColor = System.Drawing.Color.Black;
+            this.panelLeft.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLeft.BackgroundImage")));
+            this.panelLeft.Controls.Add(this.panels);
+            this.panelLeft.Controls.Add(this.Drink_btn);
+            this.panelLeft.Controls.Add(this.Food_btn);
+            this.panelLeft.Controls.Add(this.panel2);
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(135, 601);
+            this.panelLeft.TabIndex = 0;
+            // 
+            // panels
+            // 
+            this.panels.BackColor = System.Drawing.Color.DarkBlue;
+            this.panels.Location = new System.Drawing.Point(3, 91);
+            this.panels.Name = "panels";
+            this.panels.Size = new System.Drawing.Size(10, 30);
+            this.panels.TabIndex = 4;
+            // 
+            // Drink_btn
+            // 
+            this.Drink_btn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.Drink_btn.FlatAppearance.BorderSize = 0;
+            this.Drink_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
+            this.Drink_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.Drink_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Drink_btn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Drink_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Drink_btn.Location = new System.Drawing.Point(16, 127);
+            this.Drink_btn.Name = "Drink_btn";
+            this.Drink_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Drink_btn.Size = new System.Drawing.Size(119, 30);
+            this.Drink_btn.TabIndex = 3;
+            this.Drink_btn.Text = "Drink";
+            this.Drink_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Drink_btn.UseVisualStyleBackColor = false;
+            this.Drink_btn.Click += new System.EventHandler(this.Drink_btn_Click);
+            // 
+            // Food_btn
+            // 
+            this.Food_btn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.Food_btn.FlatAppearance.BorderSize = 0;
+            this.Food_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
+            this.Food_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.Food_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Food_btn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Food_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Food_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Food_btn.Location = new System.Drawing.Point(16, 91);
+            this.Food_btn.Name = "Food_btn";
+            this.Food_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Food_btn.Size = new System.Drawing.Size(119, 30);
+            this.Food_btn.TabIndex = 2;
+            this.Food_btn.Text = "Food";
+            this.Food_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Food_btn.UseVisualStyleBackColor = false;
+            this.Food_btn.Click += new System.EventHandler(this.Food_btn_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.panelslide);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(135, 88);
+            this.panel2.TabIndex = 1;
+            // 
+            // panelslide
+            // 
+            this.panelslide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(140)))), ((int)(((byte)(0)))));
+            this.panelslide.Location = new System.Drawing.Point(0, 88);
+            this.panelslide.Name = "panelslide";
+            this.panelslide.Size = new System.Drawing.Size(10, 34);
+            this.panelslide.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 40F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Location = new System.Drawing.Point(71, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(615, 79);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Welcome To Menu Food";
             // 
             // Menu_Food
             // 
@@ -404,9 +533,14 @@
             this.Name = "Menu_Food";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu_Food";
+            this.Load += new System.EventHandler(this.Menu_Food_Load);
             this.panelSideMenu.ResumeLayout(false);
             this.panelProfileSubmenu.ResumeLayout(false);
             this.panelRestaurantSubmenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.paneltop.ResumeLayout(false);
+            this.panelLeft.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -432,5 +566,14 @@
         private System.Windows.Forms.Button Restaurant_btn;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelcenter;
+        private System.Windows.Forms.Panel paneltop;
+        private System.Windows.Forms.Panel panelLeft;
+        private System.Windows.Forms.Panel panels;
+        private System.Windows.Forms.Button Drink_btn;
+        private System.Windows.Forms.Button Food_btn;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelslide;
+        public System.Windows.Forms.Label label1;
     }
 }

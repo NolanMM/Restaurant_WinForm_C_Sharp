@@ -85,7 +85,7 @@ namespace Restaurant
         private void Salary_btn_Click(object sender, System.EventArgs e)
         {
             Salary frm = new Salary();
-            frm.temp_login = found_item;
+            frm.temp_login_staff = found_item;
             this.Hide();
             frm.Show();
         }

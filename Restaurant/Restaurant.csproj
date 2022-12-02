@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Encrypt_Functions.cs" />
+    <Compile Include="Financial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial.Designer.cs">
+      <DependentUpon>Financial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forgot_Password.cs" />
     <Compile Include="Forgot_Password_Form.cs">
       <SubType>Form</SubType>
@@ -133,6 +139,24 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCDrink.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDrink.Designer.cs">
+      <DependentUpon>UCDrink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCFood.Designer.cs">
+      <DependentUpon>UCFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCHome.Designer.cs">
+      <DependentUpon>UCHome.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forgot_Password_Form.resx">
       <DependentUpon>Forgot_Password_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +196,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCDrink.resx">
+      <DependentUpon>UCDrink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCFood.resx">
+      <DependentUpon>UCFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCHome.resx">
+      <DependentUpon>UCHome.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

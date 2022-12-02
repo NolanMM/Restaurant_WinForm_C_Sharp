@@ -132,5 +132,38 @@ namespace Restaurant
         {
             System.Environment.Exit(0);
         }
+
+        ////////////////////
+        private void movesidepanel(Button btn)
+        {
+            panels.Top = btn.Top;
+            panels.Height = btn.Height;
+        }
+        private void addUC(UserControl uc)
+        {
+            panelcenter.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelcenter.Controls.Clear();
+            panelcenter.Controls.Add(uc);
+        }
+        private void Food_btn_Click(object sender, EventArgs e)
+        {
+            movesidepanel(Food_btn);
+            UCFood ucFood = new UCFood();
+            addUC(ucFood);
+        }
+
+        private void Drink_btn_Click(object sender, EventArgs e)
+        {
+            movesidepanel(Drink_btn);
+            UCDrink ucDrink = new UCDrink();
+            addUC(ucDrink);
+        }
+
+        private void Menu_Food_Load(object sender, EventArgs e)
+        {
+            UCFood ucFood = new UCFood();
+            addUC(ucFood);
+        }
     }
 }
