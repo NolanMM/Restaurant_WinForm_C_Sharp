@@ -161,6 +161,9 @@
     <EmbeddedResource Include="Salary_List_Form.resx">
       <DependentUpon>Salary_List_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Security_Form.resx">
+      <DependentUpon>Security_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Staff_Form.resx">
       <DependentUpon>Staff_Form.cs</DependentUpon>
     </EmbeddedResource>
