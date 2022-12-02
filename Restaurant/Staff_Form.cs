@@ -95,5 +95,13 @@ namespace Restaurant
         {
             showSubMenu(panelProfileSubmenu);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Financial financial_Form = new Financial();
+            financial_Form.found_item = temp_login;
+            this.Hide();
+            financial_Form.Show();
+        }
     }
 }

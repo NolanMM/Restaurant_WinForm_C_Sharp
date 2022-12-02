@@ -102,5 +102,13 @@ namespace Restaurant
         {
             System.Environment.Exit(0);
         }
+
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            Financial financial_Form = new Financial();
+            financial_Form.found_item = found_item;
+            this.Hide();
+            financial_Form.Show();
+        }
     }
 }

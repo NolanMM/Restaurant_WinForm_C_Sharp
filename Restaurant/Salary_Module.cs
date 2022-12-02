@@ -12,12 +12,13 @@ namespace Restaurant
         static public LinkedList<Salary_Staff> Read_The_Salary_From_File()
         {
             LinkedList<Salary_Staff> temp_List_In_Inventory = new LinkedList<Salary_Staff>();
-            Salary_Staff salary_node = new Salary_Staff();
+            
 
             /* @ Loop through all the line in the file...................................*/
             var lines = File.ReadLines("Salary.txt");
             foreach (var line in lines)
             {
+                Salary_Staff salary_node = new Salary_Staff();
                 /* Store the Name of the food in the Split_List_Item_Food[0] (String)....*/
                 /* Store the Portion of the food in the Split_List_Item_Food[1] (String).*/
                 string[] Split_List_Item_Food = line.Split('-');
@@ -51,15 +52,19 @@ namespace Restaurant
         static public void Store_The_Salary_To_File(LinkedList<Salary_Staff> list_staff)
         {
             string filename = "Salary.txt";
-
+            int counter = list_staff.Count();
+            string[] salary_line = new string[counter];
+            int i = 0;
             /* @ Loop thourgh all the list and write it into the file line by line */
             foreach (Salary_Staff item in list_staff)
             {
                 /* @ The inventory_line layout is "Name_Of_Food-Portion_Number" */
-                string salary_line = item.getUserName() + "-" + item.getFirstName() + "-" + item.getLastName() + "-"+ item.get_Salary().ToString() + "-" + item.get_Working_Hour_mon().ToString() + "-" + item.get_Working_Hour_tue().ToString() + "-" + item.get_Working_Hour_wed().ToString()
+                salary_line[i] = item.getUserName() + "-" + item.getFirstName() + "-" + item.getLastName() + "-"+ item.get_Salary().ToString() + "-" + item.get_Working_Hour_mon().ToString() + "-" + item.get_Working_Hour_tue().ToString() + "-" + item.get_Working_Hour_wed().ToString()
                     + "-" + item.get_Working_Hour_thur().ToString() + "-" + item.get_Working_Hour_fri().ToString() + "-" + item.get_Working_Hour_sat().ToString() + "-" + item.get_Working_Hour_sun().ToString();
-                File.WriteAllText(filename, salary_line);
+                i++;
             }
+            File.WriteAllLines(filename, salary_line);
+
         }
         static public Salary_Staff Checking_Specific_Satff_In_Salary(string username)
         {

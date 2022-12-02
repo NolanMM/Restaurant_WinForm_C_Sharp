@@ -53,6 +53,8 @@
     <Compile Include="Financial.Designer.cs">
       <DependentUpon>Financial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Financial_Class.cs" />
+    <Compile Include="Financial_Functions.cs" />
     <Compile Include="Forgot_Password.cs" />
     <Compile Include="Forgot_Password_Form.cs">
       <SubType>Form</SubType>
@@ -157,6 +159,9 @@
     <Compile Include="UCHome.Designer.cs">
       <DependentUpon>UCHome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Financial.resx">
+      <DependentUpon>Financial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forgot_Password_Form.resx">
       <DependentUpon>Forgot_Password_Form.cs</DependentUpon>
     </EmbeddedResource>
