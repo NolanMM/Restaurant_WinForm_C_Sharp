@@ -35,15 +35,23 @@ namespace Restaurant
             if (checking == true && found_item.get_Role().CompareTo("Manager") == 0)
             {
                 // Manager Forms
-                //Menu.Menu_Manager(found_item, list);
+                Manager_Form frm = new Manager_Form();
+                frm.found_item = found_item;
+                this.Hide();
+                frm.Show();
             }
             else if (checking == true && found_item.get_Role().CompareTo("Server") == 0 || checking == true && found_item.get_Role().CompareTo("Chef") == 0)
             {
                 // Staff Forms
-               // Menu.Menu_Staff(found_item, list);
+                Staff_Form frm = new Staff_Form();
+                frm.temp_login = found_item;
+                this.Hide();
+                frm.Show();
             }
+            else if (checking == true && found_item.get_Role().CompareTo("Chef") == 0 || checking == true && found_item.get_Role().CompareTo("Chef") == 0)
+            { }
             else
-            {
+                    {
                 incorrect_message.Show();
             }
         }

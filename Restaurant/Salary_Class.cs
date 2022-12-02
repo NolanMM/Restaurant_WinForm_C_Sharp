@@ -8,7 +8,9 @@ namespace Restaurant
 {
     public class Salary_Staff
     {
-        private string _username;
+        private string username;
+        private string firstname;
+        private string lastname;
         private float Salary;
 
         private float Working_Hour_Mon;
@@ -18,8 +20,13 @@ namespace Restaurant
         private float Working_Hour_Fri;
         private float Working_Hour_Sat;
         private float Working_Hour_Sun;
-        public void setUserName(string Username) { _username = Username; }
-        public string getUserName() { return _username; }
+
+        public void setUserName(string Username) { username = Username; }
+        public string getUserName() { return username; }
+        public void setFirstName(string Username) { firstname = Username; }
+        public string getFirstName() { return firstname; }
+        public void setLastName(string Username) { lastname = Username; }
+        public string getLastName() { return lastname; }
         public void set_Salary(float salary) { Salary = salary; }
         public float get_Salary() { return Salary; }
         public void set_Working_Hour_mon(float working_Hour) { Working_Hour_Mon = working_Hour; }

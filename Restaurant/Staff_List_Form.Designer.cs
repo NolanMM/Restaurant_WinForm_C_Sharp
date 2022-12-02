@@ -39,9 +39,9 @@
             this.Salary_btn = new System.Windows.Forms.Button();
             this.Profile_btn = new System.Windows.Forms.Button();
             this.panelRestaurantSubmenu = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Salary_List_Btn = new System.Windows.Forms.Button();
+            this.Staff_list_btn = new System.Windows.Forms.Button();
+            this.Financial_btn = new System.Windows.Forms.Button();
             this.Security_btn = new System.Windows.Forms.Button();
             this.Inventory_btn = new System.Windows.Forms.Button();
             this.Menu_food_btn = new System.Windows.Forms.Button();
@@ -67,13 +67,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.listView_staff = new System.Windows.Forms.ListView();
-            this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.username = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.password = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.role = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.recovery_email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Salary = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.recovery_email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelSideMenu.SuspendLayout();
             this.panelProfileSubmenu.SuspendLayout();
             this.panelRestaurantSubmenu.SuspendLayout();
@@ -106,14 +106,15 @@
             this.Exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Exit_btn.Location = new System.Drawing.Point(0, 574);
+            this.Exit_btn.Location = new System.Drawing.Point(0, 621);
             this.Exit_btn.Name = "Exit_btn";
             this.Exit_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Exit_btn.Size = new System.Drawing.Size(201, 19);
+            this.Exit_btn.Size = new System.Drawing.Size(201, 40);
             this.Exit_btn.TabIndex = 6;
             this.Exit_btn.Text = "Exit";
             this.Exit_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Exit_btn.UseVisualStyleBackColor = false;
+            this.Exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
             // About_btn
             // 
@@ -125,14 +126,15 @@
             this.About_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.About_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.About_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.About_btn.Location = new System.Drawing.Point(0, 564);
+            this.About_btn.Location = new System.Drawing.Point(0, 581);
             this.About_btn.Name = "About_btn";
             this.About_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.About_btn.Size = new System.Drawing.Size(201, 10);
+            this.About_btn.Size = new System.Drawing.Size(201, 40);
             this.About_btn.TabIndex = 5;
             this.About_btn.Text = "About";
             this.About_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.About_btn.UseVisualStyleBackColor = false;
+            this.About_btn.Click += new System.EventHandler(this.About_btn_Click);
             // 
             // Help_btn
             // 
@@ -147,11 +149,12 @@
             this.Help_btn.Location = new System.Drawing.Point(0, 541);
             this.Help_btn.Name = "Help_btn";
             this.Help_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Help_btn.Size = new System.Drawing.Size(201, 23);
+            this.Help_btn.Size = new System.Drawing.Size(201, 40);
             this.Help_btn.TabIndex = 4;
             this.Help_btn.Text = "Help";
             this.Help_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Help_btn.UseVisualStyleBackColor = false;
+            this.Help_btn.Click += new System.EventHandler(this.Help_btn_Click);
             // 
             // panelProfileSubmenu
             // 
@@ -183,6 +186,7 @@
             this.Change_password_btn.Text = "III. Change Password";
             this.Change_password_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Change_password_btn.UseVisualStyleBackColor = false;
+            this.Change_password_btn.Click += new System.EventHandler(this.Change_password_btn_Click);
             // 
             // Timetable_btn
             // 
@@ -221,6 +225,7 @@
             this.Salary_btn.Text = "I.  Salary";
             this.Salary_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Salary_btn.UseVisualStyleBackColor = false;
+            this.Salary_btn.Click += new System.EventHandler(this.Salary_btn_Click);
             // 
             // Profile_btn
             // 
@@ -240,13 +245,14 @@
             this.Profile_btn.Text = "Profile";
             this.Profile_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Profile_btn.UseVisualStyleBackColor = false;
+            this.Profile_btn.Click += new System.EventHandler(this.Profile_btn_Click);
             // 
             // panelRestaurantSubmenu
             // 
             this.panelRestaurantSubmenu.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panelRestaurantSubmenu.Controls.Add(this.button3);
-            this.panelRestaurantSubmenu.Controls.Add(this.button2);
-            this.panelRestaurantSubmenu.Controls.Add(this.button1);
+            this.panelRestaurantSubmenu.Controls.Add(this.Salary_List_Btn);
+            this.panelRestaurantSubmenu.Controls.Add(this.Staff_list_btn);
+            this.panelRestaurantSubmenu.Controls.Add(this.Financial_btn);
             this.panelRestaurantSubmenu.Controls.Add(this.Security_btn);
             this.panelRestaurantSubmenu.Controls.Add(this.Inventory_btn);
             this.panelRestaurantSubmenu.Controls.Add(this.Menu_food_btn);
@@ -256,62 +262,65 @@
             this.panelRestaurantSubmenu.Size = new System.Drawing.Size(201, 240);
             this.panelRestaurantSubmenu.TabIndex = 1;
             // 
-            // button3
+            // Salary_List_Btn
             // 
-            this.button3.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(0, 200);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(201, 40);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "VI. Salary List";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
+            this.Salary_List_Btn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.Salary_List_Btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Salary_List_Btn.FlatAppearance.BorderSize = 0;
+            this.Salary_List_Btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
+            this.Salary_List_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.Salary_List_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Salary_List_Btn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Salary_List_Btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.Salary_List_Btn.Location = new System.Drawing.Point(0, 200);
+            this.Salary_List_Btn.Name = "Salary_List_Btn";
+            this.Salary_List_Btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Salary_List_Btn.Size = new System.Drawing.Size(201, 40);
+            this.Salary_List_Btn.TabIndex = 5;
+            this.Salary_List_Btn.Text = "VI. Salary List";
+            this.Salary_List_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Salary_List_Btn.UseVisualStyleBackColor = false;
+            this.Salary_List_Btn.Click += new System.EventHandler(this.Salary_List_Btn_Click);
             // 
-            // button2
+            // Staff_list_btn
             // 
-            this.button2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(0, 160);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(201, 40);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "V.  Staff List";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.Staff_list_btn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.Staff_list_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Staff_list_btn.FlatAppearance.BorderSize = 0;
+            this.Staff_list_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
+            this.Staff_list_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.Staff_list_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Staff_list_btn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Staff_list_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.Staff_list_btn.Location = new System.Drawing.Point(0, 160);
+            this.Staff_list_btn.Name = "Staff_list_btn";
+            this.Staff_list_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Staff_list_btn.Size = new System.Drawing.Size(201, 40);
+            this.Staff_list_btn.TabIndex = 4;
+            this.Staff_list_btn.Text = "V.  Staff List";
+            this.Staff_list_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Staff_list_btn.UseVisualStyleBackColor = false;
+            this.Staff_list_btn.Click += new System.EventHandler(this.Staff_list_btn_Click);
             // 
-            // button1
+            // Financial_btn
             // 
-            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(0, 120);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(201, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "IV. Financial";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.Financial_btn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.Financial_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Financial_btn.FlatAppearance.BorderSize = 0;
+            this.Financial_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
+            this.Financial_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.Financial_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Financial_btn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Financial_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.Financial_btn.Location = new System.Drawing.Point(0, 120);
+            this.Financial_btn.Name = "Financial_btn";
+            this.Financial_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Financial_btn.Size = new System.Drawing.Size(201, 40);
+            this.Financial_btn.TabIndex = 3;
+            this.Financial_btn.Text = "IV. Financial";
+            this.Financial_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Financial_btn.UseVisualStyleBackColor = false;
+            this.Financial_btn.Click += new System.EventHandler(this.Financial_btn_Click);
             // 
             // Security_btn
             // 
@@ -331,6 +340,7 @@
             this.Security_btn.Text = "III. Security";
             this.Security_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Security_btn.UseVisualStyleBackColor = false;
+            this.Security_btn.Click += new System.EventHandler(this.Security_btn_Click);
             // 
             // Inventory_btn
             // 
@@ -350,6 +360,7 @@
             this.Inventory_btn.Text = "II.  Inventory";
             this.Inventory_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Inventory_btn.UseVisualStyleBackColor = false;
+            this.Inventory_btn.Click += new System.EventHandler(this.Inventory_btn_Click);
             // 
             // Menu_food_btn
             // 
@@ -369,6 +380,7 @@
             this.Menu_food_btn.Text = "I.   Menu Food";
             this.Menu_food_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Menu_food_btn.UseVisualStyleBackColor = false;
+            this.Menu_food_btn.Click += new System.EventHandler(this.Menu_food_btn_Click);
             // 
             // Restaurant_btn
             // 
@@ -389,6 +401,7 @@
             this.Restaurant_btn.Text = "Restaurant";
             this.Restaurant_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Restaurant_btn.UseVisualStyleBackColor = false;
+            this.Restaurant_btn.Click += new System.EventHandler(this.Restaurant_btn_Click_1);
             // 
             // panelLogo
             // 
@@ -666,16 +679,6 @@
             this.listView_staff.UseCompatibleStateImageBehavior = false;
             this.listView_staff.View = System.Windows.Forms.View.Details;
             // 
-            // FirstName
-            // 
-            this.FirstName.Text = "FirstName";
-            this.FirstName.Width = 70;
-            // 
-            // LastName
-            // 
-            this.LastName.Text = "LastName";
-            this.LastName.Width = 70;
-            // 
             // username
             // 
             this.username.Text = "Username";
@@ -686,18 +689,28 @@
             this.password.Text = "Password";
             this.password.Width = 120;
             // 
+            // FirstName
+            // 
+            this.FirstName.Text = "FirstName";
+            this.FirstName.Width = 70;
+            // 
+            // LastName
+            // 
+            this.LastName.Text = "LastName";
+            this.LastName.Width = 70;
+            // 
             // role
             // 
             this.role.Text = "Role";
+            // 
+            // Salary
+            // 
+            this.Salary.Text = "Salary";
             // 
             // recovery_email
             // 
             this.recovery_email.Text = "Recovery Email";
             this.recovery_email.Width = 220;
-            // 
-            // Salary
-            // 
-            this.Salary.Text = "Salary";
             // 
             // Staff_List_Form
             // 
@@ -731,9 +744,9 @@
         private System.Windows.Forms.Button Salary_btn;
         private System.Windows.Forms.Button Profile_btn;
         private System.Windows.Forms.Panel panelRestaurantSubmenu;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Salary_List_Btn;
+        private System.Windows.Forms.Button Staff_list_btn;
+        private System.Windows.Forms.Button Financial_btn;
         private System.Windows.Forms.Button Security_btn;
         private System.Windows.Forms.Button Inventory_btn;
         private System.Windows.Forms.Button Menu_food_btn;

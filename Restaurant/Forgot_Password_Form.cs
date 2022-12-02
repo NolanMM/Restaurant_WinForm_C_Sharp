@@ -19,6 +19,7 @@ namespace Restaurant
 
         string OTP_Code;
         string username;
+        public Staff_Login temp_login { get; set; }
         private void Username_btn_Click(object sender, EventArgs e)
         {
             Staff_Login temp_login = new Staff_Login();
@@ -49,6 +50,15 @@ namespace Restaurant
             /* @ Checking the verify code 3 times or 
              * @ Else logout and start from beginning due to the security 
              */
+            Staff_Login Temp_login = new Staff_Login();
+            string username = username_box.Text;
+            Temp_login.setUserName(username);
+            LinkedList<Staff_Login> list = Login_Functions.Create_Read_Account_Login_List();
+
+            Staff_Login find_item = Login_Functions.Find_Item_by_username_Return_Node(temp_login, list);
+
+            temp_login = find_item;
+
             string verify_code_input = OTP_box.Text;
             int count = 0;
             while (count >= 0)
@@ -63,7 +73,7 @@ namespace Restaurant
                 if (verify_code_input.CompareTo(OTP_Code) == 0)
                 {
                     New_password_form frm = new New_password_form();
-                    frm.Username = username;
+                    frm.temp_login = temp_login;
                     this.Hide();
                     frm.ShowDialog();
                 }
@@ -87,6 +97,5 @@ namespace Restaurant
         {
             System.Environment.Exit(0);
         }
-
     }
 }

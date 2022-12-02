@@ -198,7 +198,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1027, 562);
+            this.ClientSize = new System.Drawing.Size(1027, 552);
             this.ControlBox = false;
             this.Controls.Add(this.Wrong_Verify_code);
             this.Controls.Add(this.Too_many_Time_text);

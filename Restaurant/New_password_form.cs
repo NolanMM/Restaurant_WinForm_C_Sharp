@@ -17,7 +17,7 @@ namespace Restaurant
         {
             InitializeComponent();
         }
-        public string Username { get; set; }
+        public Staff_Login temp_login { get; set; }
 
         private void Exit_btn_Click(object sender, EventArgs e)
         {
@@ -27,7 +27,7 @@ namespace Restaurant
         private void New_password_btn_Click(object sender, EventArgs e)
         {
             Staff_Login temp_login = new Staff_Login();
-            temp_login.setUserName(Username);
+            temp_login.setUserName(temp_login.getUserName());
             LinkedList<Staff_Login> list = Login_Functions.Create_Read_Account_Login_List();
 
             Staff_Login find_item = Login_Functions.Find_Item_by_username_Return_Node(temp_login, list);

@@ -21,16 +21,20 @@ namespace Restaurant
                 /* Store the Name of the food in the Split_List_Item_Food[0] (String)....*/
                 /* Store the Portion of the food in the Split_List_Item_Food[1] (String).*/
                 string[] Split_List_Item_Food = line.Split('-');
-                float Salary_per_Hour = (float)Convert.ToDouble(Split_List_Item_Food[1]);
-                float Working_Hour_mon = (float)Convert.ToDouble(Split_List_Item_Food[2]);
-                float Working_Hour_tue = (float)Convert.ToDouble(Split_List_Item_Food[3]);
-                float Working_Hour_wed = (float)Convert.ToDouble(Split_List_Item_Food[4]);
-                float Working_Hour_thur = (float)Convert.ToDouble(Split_List_Item_Food[5]);
-                float Working_Hour_fri = (float)Convert.ToDouble(Split_List_Item_Food[6]);
-                float Working_Hour_sat = (float)Convert.ToDouble(Split_List_Item_Food[7]);
-                float Working_Hour_sun = (float)Convert.ToDouble(Split_List_Item_Food[8]);
+                float Salary_per_Hour = (float)Convert.ToDouble(Split_List_Item_Food[3]);
+                float Working_Hour_mon = (float)Convert.ToDouble(Split_List_Item_Food[4]);
+                float Working_Hour_tue = (float)Convert.ToDouble(Split_List_Item_Food[5]);
+                float Working_Hour_wed = (float)Convert.ToDouble(Split_List_Item_Food[6]);
+                float Working_Hour_thur = (float)Convert.ToDouble(Split_List_Item_Food[7]);
+                float Working_Hour_fri = (float)Convert.ToDouble(Split_List_Item_Food[8]);
+                float Working_Hour_sat = (float)Convert.ToDouble(Split_List_Item_Food[9]);
+                float Working_Hour_sun = (float)Convert.ToDouble(Split_List_Item_Food[10]);
+
                 /* Store information of the food into the node of the list of the food...*/
                 salary_node.setUserName(Split_List_Item_Food[0]);
+                salary_node.setFirstName(Split_List_Item_Food[1]);
+                salary_node.setLastName(Split_List_Item_Food[2]);
+
                 salary_node.set_Salary(Salary_per_Hour);
                 salary_node.set_Working_Hour_mon(Working_Hour_mon);
                 salary_node.set_Working_Hour_tue(Working_Hour_tue);
@@ -52,7 +56,7 @@ namespace Restaurant
             foreach (Salary_Staff item in list_staff)
             {
                 /* @ The inventory_line layout is "Name_Of_Food-Portion_Number" */
-                string salary_line = item.getUserName() + "-" + item.get_Salary().ToString() + "-" + item.get_Working_Hour_mon().ToString() + "-" + item.get_Working_Hour_tue().ToString() + "-" + item.get_Working_Hour_wed().ToString()
+                string salary_line = item.getUserName() + "-" + item.getFirstName() + "-" + item.getLastName() + "-"+ item.get_Salary().ToString() + "-" + item.get_Working_Hour_mon().ToString() + "-" + item.get_Working_Hour_tue().ToString() + "-" + item.get_Working_Hour_wed().ToString()
                     + "-" + item.get_Working_Hour_thur().ToString() + "-" + item.get_Working_Hour_fri().ToString() + "-" + item.get_Working_Hour_sat().ToString() + "-" + item.get_Working_Hour_sun().ToString();
                 File.WriteAllText(filename, salary_line);
             }

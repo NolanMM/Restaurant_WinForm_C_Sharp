@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Security_Form));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.Exit_btn = new System.Windows.Forms.Button();
             this.About_btn = new System.Windows.Forms.Button();
@@ -48,7 +49,16 @@
             this.Restaurant_btn = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Therminal = new System.Windows.Forms.Button();
+            this.Humidity = new System.Windows.Forms.Button();
+            this.Fan_Off = new System.Windows.Forms.Button();
+            this.Fan_On = new System.Windows.Forms.Button();
+            this.Led_Off = new System.Windows.Forms.Button();
+            this.Led_On = new System.Windows.Forms.Button();
+            this.Close_btn = new System.Windows.Forms.Button();
+            this.Open_btn = new System.Windows.Forms.Button();
             this.Temperature_box = new System.Windows.Forms.TextBox();
             this.Humidity_box = new System.Windows.Forms.TextBox();
             this.fan_box = new System.Windows.Forms.TextBox();
@@ -57,20 +67,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Led_Status = new System.Windows.Forms.Label();
-            this.Close_btn = new System.Windows.Forms.Button();
-            this.Open_btn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.COM_PORT_BOX = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Therminal = new System.Windows.Forms.Button();
-            this.Humidity = new System.Windows.Forms.Button();
-            this.Fan_Off = new System.Windows.Forms.Button();
-            this.Fan_On = new System.Windows.Forms.Button();
-            this.Led_Off = new System.Windows.Forms.Button();
-            this.Led_On = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelSideMenu.SuspendLayout();
             this.panelProfileSubmenu.SuspendLayout();
             this.panelRestaurantSubmenu.SuspendLayout();
@@ -103,14 +104,15 @@
             this.Exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Exit_btn.Location = new System.Drawing.Point(0, 631);
+            this.Exit_btn.Location = new System.Drawing.Point(0, 621);
             this.Exit_btn.Name = "Exit_btn";
             this.Exit_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Exit_btn.Size = new System.Drawing.Size(201, 42);
+            this.Exit_btn.Size = new System.Drawing.Size(201, 40);
             this.Exit_btn.TabIndex = 6;
             this.Exit_btn.Text = "Exit";
             this.Exit_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Exit_btn.UseVisualStyleBackColor = false;
+            this.Exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
             // About_btn
             // 
@@ -122,14 +124,15 @@
             this.About_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.About_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.About_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.About_btn.Location = new System.Drawing.Point(0, 586);
+            this.About_btn.Location = new System.Drawing.Point(0, 581);
             this.About_btn.Name = "About_btn";
             this.About_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.About_btn.Size = new System.Drawing.Size(201, 45);
+            this.About_btn.Size = new System.Drawing.Size(201, 40);
             this.About_btn.TabIndex = 5;
             this.About_btn.Text = "About";
             this.About_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.About_btn.UseVisualStyleBackColor = false;
+            this.About_btn.Click += new System.EventHandler(this.About_btn_Click);
             // 
             // Help_btn
             // 
@@ -144,11 +147,12 @@
             this.Help_btn.Location = new System.Drawing.Point(0, 541);
             this.Help_btn.Name = "Help_btn";
             this.Help_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Help_btn.Size = new System.Drawing.Size(201, 45);
+            this.Help_btn.Size = new System.Drawing.Size(201, 40);
             this.Help_btn.TabIndex = 4;
             this.Help_btn.Text = "Help";
             this.Help_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Help_btn.UseVisualStyleBackColor = false;
+            this.Help_btn.Click += new System.EventHandler(this.Help_btn_Click);
             // 
             // panelProfileSubmenu
             // 
@@ -180,6 +184,7 @@
             this.Change_password_btn.Text = "III. Change Password";
             this.Change_password_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Change_password_btn.UseVisualStyleBackColor = false;
+            this.Change_password_btn.Click += new System.EventHandler(this.Change_password_btn_Click);
             // 
             // Timetable_btn
             // 
@@ -218,6 +223,7 @@
             this.Salary_btn.Text = "I.  Salary";
             this.Salary_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Salary_btn.UseVisualStyleBackColor = false;
+            this.Salary_btn.Click += new System.EventHandler(this.Salary_btn_Click);
             // 
             // Profile_btn
             // 
@@ -237,6 +243,7 @@
             this.Profile_btn.Text = "Profile";
             this.Profile_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Profile_btn.UseVisualStyleBackColor = false;
+            this.Profile_btn.Click += new System.EventHandler(this.Profile_btn_Click);
             // 
             // panelRestaurantSubmenu
             // 
@@ -271,6 +278,7 @@
             this.button3.Text = "VI. Salary List";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -290,6 +298,7 @@
             this.button2.Text = "V.  Staff List";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -328,6 +337,7 @@
             this.Security_btn.Text = "III. Security";
             this.Security_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Security_btn.UseVisualStyleBackColor = false;
+            this.Security_btn.Click += new System.EventHandler(this.Security_btn_Click);
             // 
             // Inventory_btn
             // 
@@ -347,6 +357,7 @@
             this.Inventory_btn.Text = "II.  Inventory";
             this.Inventory_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Inventory_btn.UseVisualStyleBackColor = false;
+            this.Inventory_btn.Click += new System.EventHandler(this.Inventory_btn_Click);
             // 
             // Menu_food_btn
             // 
@@ -366,6 +377,7 @@
             this.Menu_food_btn.Text = "I.   Menu Food";
             this.Menu_food_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Menu_food_btn.UseVisualStyleBackColor = false;
+            this.Menu_food_btn.Click += new System.EventHandler(this.Menu_food_btn_Click);
             // 
             // Restaurant_btn
             // 
@@ -386,6 +398,7 @@
             this.Restaurant_btn.Text = "Restaurant";
             this.Restaurant_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Restaurant_btn.UseVisualStyleBackColor = false;
+            this.Restaurant_btn.Click += new System.EventHandler(this.Restaurant_btn_Click_1);
             // 
             // panelLogo
             // 
@@ -398,8 +411,18 @@
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.Therminal);
+            this.panel1.Controls.Add(this.Humidity);
+            this.panel1.Controls.Add(this.Fan_Off);
+            this.panel1.Controls.Add(this.Fan_On);
+            this.panel1.Controls.Add(this.Led_Off);
+            this.panel1.Controls.Add(this.Led_On);
+            this.panel1.Controls.Add(this.Close_btn);
+            this.panel1.Controls.Add(this.Open_btn);
             this.panel1.Controls.Add(this.Temperature_box);
             this.panel1.Controls.Add(this.Humidity_box);
             this.panel1.Controls.Add(this.fan_box);
@@ -408,148 +431,264 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.Led_Status);
-            this.panel1.Controls.Add(this.Close_btn);
-            this.panel1.Controls.Add(this.Open_btn);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.COM_PORT_BOX);
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.Therminal);
-            this.panel1.Controls.Add(this.Humidity);
-            this.panel1.Controls.Add(this.Fan_Off);
-            this.panel1.Controls.Add(this.Fan_On);
-            this.panel1.Controls.Add(this.Led_Off);
-            this.panel1.Controls.Add(this.Led_On);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(218, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(809, 562);
             this.panel1.TabIndex = 4;
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Black;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.textBox1.ForeColor = System.Drawing.Color.Red;
+            this.textBox1.Location = new System.Drawing.Point(408, 430);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(329, 43);
+            this.textBox1.TabIndex = 35;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(716, 319);
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(452, 390);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "label1";
+            this.label1.Size = new System.Drawing.Size(236, 37);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Connection Status";
+            // 
+            // Therminal
+            // 
+            this.Therminal.BackColor = System.Drawing.Color.Black;
+            this.Therminal.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Therminal.ForeColor = System.Drawing.Color.GreenYellow;
+            this.Therminal.Location = new System.Drawing.Point(72, 475);
+            this.Therminal.Name = "Therminal";
+            this.Therminal.Size = new System.Drawing.Size(272, 45);
+            this.Therminal.TabIndex = 31;
+            this.Therminal.Text = "Temperature Update";
+            this.Therminal.UseVisualStyleBackColor = false;
+            this.Therminal.Click += new System.EventHandler(this.Therminal_Click_1);
+            // 
+            // Humidity
+            // 
+            this.Humidity.BackColor = System.Drawing.Color.Black;
+            this.Humidity.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Humidity.ForeColor = System.Drawing.Color.GreenYellow;
+            this.Humidity.Location = new System.Drawing.Point(84, 361);
+            this.Humidity.Name = "Humidity";
+            this.Humidity.Size = new System.Drawing.Size(244, 45);
+            this.Humidity.TabIndex = 30;
+            this.Humidity.Text = "Humidity Update";
+            this.Humidity.UseVisualStyleBackColor = false;
+            this.Humidity.Click += new System.EventHandler(this.Humidity_Click_1);
+            // 
+            // Fan_Off
+            // 
+            this.Fan_Off.BackColor = System.Drawing.Color.Black;
+            this.Fan_Off.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fan_Off.ForeColor = System.Drawing.Color.Red;
+            this.Fan_Off.Location = new System.Drawing.Point(268, 220);
+            this.Fan_Off.Name = "Fan_Off";
+            this.Fan_Off.Size = new System.Drawing.Size(122, 45);
+            this.Fan_Off.TabIndex = 29;
+            this.Fan_Off.Text = "Fan OFF";
+            this.Fan_Off.UseVisualStyleBackColor = false;
+            this.Fan_Off.Click += new System.EventHandler(this.Fan_Off_Click_1);
+            // 
+            // Fan_On
+            // 
+            this.Fan_On.BackColor = System.Drawing.Color.Black;
+            this.Fan_On.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fan_On.ForeColor = System.Drawing.Color.Snow;
+            this.Fan_On.Location = new System.Drawing.Point(34, 220);
+            this.Fan_On.Name = "Fan_On";
+            this.Fan_On.Size = new System.Drawing.Size(122, 45);
+            this.Fan_On.TabIndex = 28;
+            this.Fan_On.Text = "Fan ON";
+            this.Fan_On.UseVisualStyleBackColor = false;
+            this.Fan_On.Click += new System.EventHandler(this.Fan_On_Click_1);
+            // 
+            // Led_Off
+            // 
+            this.Led_Off.BackColor = System.Drawing.Color.Black;
+            this.Led_Off.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Led_Off.ForeColor = System.Drawing.Color.Red;
+            this.Led_Off.Location = new System.Drawing.Point(268, 121);
+            this.Led_Off.Name = "Led_Off";
+            this.Led_Off.Size = new System.Drawing.Size(122, 45);
+            this.Led_Off.TabIndex = 27;
+            this.Led_Off.Text = "Led OFF";
+            this.Led_Off.UseVisualStyleBackColor = false;
+            this.Led_Off.Click += new System.EventHandler(this.Led_Off_Click_1);
+            // 
+            // Led_On
+            // 
+            this.Led_On.BackColor = System.Drawing.Color.Black;
+            this.Led_On.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Led_On.ForeColor = System.Drawing.Color.Snow;
+            this.Led_On.Location = new System.Drawing.Point(34, 117);
+            this.Led_On.Name = "Led_On";
+            this.Led_On.Size = new System.Drawing.Size(122, 45);
+            this.Led_On.TabIndex = 26;
+            this.Led_On.Text = "Led ON";
+            this.Led_On.UseVisualStyleBackColor = false;
+            this.Led_On.Click += new System.EventHandler(this.Led_On_Click_1);
+            // 
+            // Close_btn
+            // 
+            this.Close_btn.BackColor = System.Drawing.Color.Black;
+            this.Close_btn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close_btn.ForeColor = System.Drawing.Color.Red;
+            this.Close_btn.Location = new System.Drawing.Point(611, 235);
+            this.Close_btn.Name = "Close_btn";
+            this.Close_btn.Size = new System.Drawing.Size(87, 45);
+            this.Close_btn.TabIndex = 25;
+            this.Close_btn.Text = "Close";
+            this.Close_btn.UseVisualStyleBackColor = false;
+            this.Close_btn.Click += new System.EventHandler(this.Close_btn_Click_1);
+            // 
+            // Open_btn
+            // 
+            this.Open_btn.BackColor = System.Drawing.Color.Black;
+            this.Open_btn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Open_btn.ForeColor = System.Drawing.Color.Snow;
+            this.Open_btn.Location = new System.Drawing.Point(492, 235);
+            this.Open_btn.Name = "Open_btn";
+            this.Open_btn.Size = new System.Drawing.Size(89, 45);
+            this.Open_btn.TabIndex = 24;
+            this.Open_btn.Text = "Open";
+            this.Open_btn.UseVisualStyleBackColor = false;
+            this.Open_btn.Click += new System.EventHandler(this.Open_btn_Click_1);
             // 
             // Temperature_box
             // 
             this.Temperature_box.BackColor = System.Drawing.Color.Black;
+            this.Temperature_box.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
             this.Temperature_box.ForeColor = System.Drawing.Color.White;
-            this.Temperature_box.Location = new System.Drawing.Point(589, 348);
+            this.Temperature_box.Location = new System.Drawing.Point(244, 430);
             this.Temperature_box.Name = "Temperature_box";
-            this.Temperature_box.Size = new System.Drawing.Size(100, 20);
+            this.Temperature_box.Size = new System.Drawing.Size(100, 43);
             this.Temperature_box.TabIndex = 23;
             // 
             // Humidity_box
             // 
             this.Humidity_box.BackColor = System.Drawing.Color.Black;
+            this.Humidity_box.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
             this.Humidity_box.ForeColor = System.Drawing.Color.White;
-            this.Humidity_box.Location = new System.Drawing.Point(589, 320);
+            this.Humidity_box.Location = new System.Drawing.Point(214, 313);
             this.Humidity_box.Name = "Humidity_box";
-            this.Humidity_box.Size = new System.Drawing.Size(100, 20);
+            this.Humidity_box.Size = new System.Drawing.Size(114, 43);
             this.Humidity_box.TabIndex = 22;
             // 
             // fan_box
             // 
             this.fan_box.BackColor = System.Drawing.Color.Black;
-            this.fan_box.ForeColor = System.Drawing.Color.White;
-            this.fan_box.Location = new System.Drawing.Point(589, 293);
+            this.fan_box.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.fan_box.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.fan_box.ForeColor = System.Drawing.Color.Red;
+            this.fan_box.Location = new System.Drawing.Point(162, 227);
             this.fan_box.Name = "fan_box";
-            this.fan_box.Size = new System.Drawing.Size(100, 20);
+            this.fan_box.Size = new System.Drawing.Size(100, 36);
             this.fan_box.TabIndex = 21;
             // 
             // Led_box
             // 
-            this.Led_box.Location = new System.Drawing.Point(589, 240);
+            this.Led_box.BackColor = System.Drawing.Color.Black;
+            this.Led_box.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Led_box.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Led_box.ForeColor = System.Drawing.Color.Red;
+            this.Led_box.Location = new System.Drawing.Point(162, 123);
             this.Led_box.Name = "Led_box";
-            this.Led_box.Size = new System.Drawing.Size(100, 20);
+            this.Led_box.Size = new System.Drawing.Size(100, 36);
             this.Led_box.TabIndex = 20;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(490, 320);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(77, 313);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.Size = new System.Drawing.Size(131, 37);
             this.label5.TabIndex = 19;
             this.label5.Text = "Humidity";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(490, 348);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(77, 430);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.Size = new System.Drawing.Size(173, 37);
             this.label4.TabIndex = 18;
             this.label4.Text = "Temperature";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(490, 293);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(119, 180);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.Size = new System.Drawing.Size(172, 37);
             this.label3.TabIndex = 17;
             this.label3.Text = "FAN STATUS";
             // 
             // Led_Status
             // 
             this.Led_Status.AutoSize = true;
-            this.Led_Status.Location = new System.Drawing.Point(493, 240);
+            this.Led_Status.BackColor = System.Drawing.Color.Transparent;
+            this.Led_Status.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Led_Status.ForeColor = System.Drawing.Color.White;
+            this.Led_Status.Location = new System.Drawing.Point(128, 75);
             this.Led_Status.Name = "Led_Status";
-            this.Led_Status.Size = new System.Drawing.Size(74, 13);
+            this.Led_Status.Size = new System.Drawing.Size(159, 37);
             this.Led_Status.TabIndex = 16;
-            this.Led_Status.Text = "LED STATUS";
-            // 
-            // Close_btn
-            // 
-            this.Close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Close_btn.Location = new System.Drawing.Point(493, 190);
-            this.Close_btn.Name = "Close_btn";
-            this.Close_btn.Size = new System.Drawing.Size(75, 23);
-            this.Close_btn.TabIndex = 15;
-            this.Close_btn.Text = "Close";
-            this.Close_btn.UseVisualStyleBackColor = true;
-            this.Close_btn.Click += new System.EventHandler(this.Close_btn_Click);
-            // 
-            // Open_btn
-            // 
-            this.Open_btn.Location = new System.Drawing.Point(493, 150);
-            this.Open_btn.Name = "Open_btn";
-            this.Open_btn.Size = new System.Drawing.Size(75, 23);
-            this.Open_btn.TabIndex = 14;
-            this.Open_btn.Text = "Open";
-            this.Open_btn.UseVisualStyleBackColor = true;
-            this.Open_btn.Click += new System.EventHandler(this.Open_btn_Click);
+            this.Led_Status.Text = "Light Status";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(493, 94);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(485, 150);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.Size = new System.Drawing.Size(160, 37);
             this.label2.TabIndex = 13;
             this.label2.Text = "BAUD RATE";
             // 
             // COM_PORT_BOX
             // 
             this.COM_PORT_BOX.AutoSize = true;
-            this.COM_PORT_BOX.Location = new System.Drawing.Point(493, 47);
+            this.COM_PORT_BOX.BackColor = System.Drawing.Color.Transparent;
+            this.COM_PORT_BOX.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.COM_PORT_BOX.ForeColor = System.Drawing.Color.White;
+            this.COM_PORT_BOX.Location = new System.Drawing.Point(485, 75);
             this.COM_PORT_BOX.Name = "COM_PORT_BOX";
-            this.COM_PORT_BOX.Size = new System.Drawing.Size(64, 13);
+            this.COM_PORT_BOX.Size = new System.Drawing.Size(151, 37);
             this.COM_PORT_BOX.TabIndex = 12;
             this.COM_PORT_BOX.Text = "COM PORT";
             // 
             // comboBox2
             // 
+            this.comboBox2.BackColor = System.Drawing.Color.Black;
+            this.comboBox2.ForeColor = System.Drawing.Color.White;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "9600"});
-            this.comboBox2.Location = new System.Drawing.Point(493, 110);
+            this.comboBox2.Location = new System.Drawing.Point(492, 195);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 11;
@@ -561,81 +700,10 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "COM3"});
-            this.comboBox1.Location = new System.Drawing.Point(493, 66);
+            this.comboBox1.Location = new System.Drawing.Point(492, 121);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 10;
-            // 
-            // Therminal
-            // 
-            this.Therminal.Location = new System.Drawing.Point(302, 270);
-            this.Therminal.Name = "Therminal";
-            this.Therminal.Size = new System.Drawing.Size(75, 23);
-            this.Therminal.TabIndex = 9;
-            this.Therminal.Text = "Therminal";
-            this.Therminal.UseVisualStyleBackColor = true;
-            this.Therminal.Click += new System.EventHandler(this.Therminal_Click);
-            // 
-            // Humidity
-            // 
-            this.Humidity.Location = new System.Drawing.Point(302, 230);
-            this.Humidity.Name = "Humidity";
-            this.Humidity.Size = new System.Drawing.Size(75, 23);
-            this.Humidity.TabIndex = 8;
-            this.Humidity.Text = "Humidity";
-            this.Humidity.UseVisualStyleBackColor = true;
-            this.Humidity.Click += new System.EventHandler(this.Humidity_Click);
-            // 
-            // Fan_Off
-            // 
-            this.Fan_Off.Location = new System.Drawing.Point(302, 190);
-            this.Fan_Off.Name = "Fan_Off";
-            this.Fan_Off.Size = new System.Drawing.Size(75, 23);
-            this.Fan_Off.TabIndex = 7;
-            this.Fan_Off.Text = "Fan Off";
-            this.Fan_Off.UseVisualStyleBackColor = true;
-            this.Fan_Off.Click += new System.EventHandler(this.Fan_Off_Click);
-            // 
-            // Fan_On
-            // 
-            this.Fan_On.Location = new System.Drawing.Point(302, 150);
-            this.Fan_On.Name = "Fan_On";
-            this.Fan_On.Size = new System.Drawing.Size(75, 23);
-            this.Fan_On.TabIndex = 6;
-            this.Fan_On.Text = "Fan On";
-            this.Fan_On.UseVisualStyleBackColor = true;
-            this.Fan_On.Click += new System.EventHandler(this.Fan_On_Click);
-            // 
-            // Led_Off
-            // 
-            this.Led_Off.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Led_Off.Location = new System.Drawing.Point(302, 110);
-            this.Led_Off.Name = "Led_Off";
-            this.Led_Off.Size = new System.Drawing.Size(75, 23);
-            this.Led_Off.TabIndex = 5;
-            this.Led_Off.Text = "Led Off";
-            this.Led_Off.UseVisualStyleBackColor = true;
-            this.Led_Off.Click += new System.EventHandler(this.Led_Off_Click);
-            // 
-            // Led_On
-            // 
-            this.Led_On.Location = new System.Drawing.Point(302, 65);
-            this.Led_On.Name = "Led_On";
-            this.Led_On.Size = new System.Drawing.Size(75, 23);
-            this.Led_On.TabIndex = 1;
-            this.Led_On.Text = "Led On";
-            this.Led_On.UseVisualStyleBackColor = true;
-            this.Led_On.Click += new System.EventHandler(this.Led_On_Click);
-            // 
-            // serialPort1
-            // 
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(464, 418);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(268, 20);
-            this.textBox1.TabIndex = 25;
             // 
             // Security_Form
             // 
@@ -678,12 +746,6 @@
         private System.Windows.Forms.Button Restaurant_btn;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Fan_On;
-        private System.Windows.Forms.Button Led_Off;
-        private System.Windows.Forms.Button Led_On;
-        private System.Windows.Forms.Button Therminal;
-        private System.Windows.Forms.Button Humidity;
-        private System.Windows.Forms.Button Fan_Off;
         private System.Windows.Forms.TextBox Temperature_box;
         private System.Windows.Forms.TextBox Humidity_box;
         private System.Windows.Forms.TextBox fan_box;
@@ -692,14 +754,20 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Led_Status;
-        private System.Windows.Forms.Button Close_btn;
-        private System.Windows.Forms.Button Open_btn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label COM_PORT_BOX;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
         private System.IO.Ports.SerialPort serialPort1;
+        public System.Windows.Forms.Button Close_btn;
+        public System.Windows.Forms.Button Open_btn;
+        public System.Windows.Forms.Button Therminal;
+        public System.Windows.Forms.Button Humidity;
+        public System.Windows.Forms.Button Fan_Off;
+        public System.Windows.Forms.Button Fan_On;
+        public System.Windows.Forms.Button Led_Off;
+        public System.Windows.Forms.Button Led_On;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

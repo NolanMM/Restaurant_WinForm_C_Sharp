@@ -87,6 +87,7 @@
             this.Exit_btn.Text = "Exit";
             this.Exit_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Exit_btn.UseVisualStyleBackColor = false;
+            this.Exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
             // About_btn
             // 
@@ -156,6 +157,7 @@
             this.Change_password_btn.Text = "III. Change Password";
             this.Change_password_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Change_password_btn.UseVisualStyleBackColor = false;
+            this.Change_password_btn.Click += new System.EventHandler(this.Change_password_btn_Click);
             // 
             // Timetable_btn
             // 
@@ -194,6 +196,7 @@
             this.Salary_btn.Text = "I.  Salary";
             this.Salary_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Salary_btn.UseVisualStyleBackColor = false;
+            this.Salary_btn.Click += new System.EventHandler(this.Salary_btn_Click);
             // 
             // Profile_btn
             // 
@@ -213,6 +216,7 @@
             this.Profile_btn.Text = "Profile";
             this.Profile_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Profile_btn.UseVisualStyleBackColor = false;
+            this.Profile_btn.Click += new System.EventHandler(this.Profile_btn_Click);
             // 
             // panelRestaurantSubmenu
             // 
@@ -264,6 +268,7 @@
             this.Security_btn.Text = "III. Security";
             this.Security_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Security_btn.UseVisualStyleBackColor = false;
+            this.Security_btn.Click += new System.EventHandler(this.Security_btn_Click);
             // 
             // Inventory_btn
             // 
@@ -283,6 +288,7 @@
             this.Inventory_btn.Text = "II.  Inventory";
             this.Inventory_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Inventory_btn.UseVisualStyleBackColor = false;
+            this.Inventory_btn.Click += new System.EventHandler(this.Inventory_btn_Click);
             // 
             // Menu_food_btn
             // 
@@ -302,6 +308,7 @@
             this.Menu_food_btn.Text = "I.   Menu Food";
             this.Menu_food_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Menu_food_btn.UseVisualStyleBackColor = false;
+            this.Menu_food_btn.Click += new System.EventHandler(this.Menu_food_btn_Click);
             // 
             // Restaurant_btn
             // 
@@ -322,6 +329,7 @@
             this.Restaurant_btn.Text = "Restaurant";
             this.Restaurant_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Restaurant_btn.UseVisualStyleBackColor = false;
+            this.Restaurant_btn.Click += new System.EventHandler(this.Restaurant_btn_Click_1);
             // 
             // panelLogo
             // 
