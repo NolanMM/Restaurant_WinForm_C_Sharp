@@ -47,20 +47,12 @@
             this.Menu_food_btn = new System.Windows.Forms.Button();
             this.Restaurant_btn = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.listView_fiancial = new System.Windows.Forms.ListView();
-            this.NameFood = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.numsell = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.PricePerUnit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Totalsell = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label = new System.Windows.Forms.Label();
-            this.Electronic_Bill = new System.Windows.Forms.Label();
-            this.label88 = new System.Windows.Forms.Label();
-            this.Salary_Staff = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Total_of_total = new System.Windows.Forms.Label();
+            this.TotalLastMonthLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Total_income = new System.Windows.Forms.Label();
+            this.TotalIncomeLabel = new System.Windows.Forms.Label();
+            this.OrdersTextBox = new System.Windows.Forms.TextBox();
             this.panelSideMenu.SuspendLayout();
             this.panelProfileSubmenu.SuspendLayout();
             this.panelRestaurantSubmenu.SuspendLayout();
@@ -398,119 +390,30 @@
             this.panelLogo.Size = new System.Drawing.Size(201, 88);
             this.panelLogo.TabIndex = 0;
             // 
-            // listView_fiancial
-            // 
-            this.listView_fiancial.BackColor = System.Drawing.Color.Black;
-            this.listView_fiancial.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("listView_fiancial.BackgroundImage")));
-            this.listView_fiancial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView_fiancial.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.NameFood,
-            this.numsell,
-            this.PricePerUnit,
-            this.Totalsell});
-            this.listView_fiancial.GridLines = true;
-            this.listView_fiancial.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView_fiancial.HideSelection = false;
-            this.listView_fiancial.Location = new System.Drawing.Point(235, 94);
-            this.listView_fiancial.MultiSelect = false;
-            this.listView_fiancial.Name = "listView_fiancial";
-            this.listView_fiancial.Size = new System.Drawing.Size(525, 226);
-            this.listView_fiancial.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.listView_fiancial.TabIndex = 5;
-            this.listView_fiancial.UseCompatibleStateImageBehavior = false;
-            this.listView_fiancial.View = System.Windows.Forms.View.Details;
-            // 
-            // NameFood
-            // 
-            this.NameFood.Text = "Name Of Food";
-            this.NameFood.Width = 180;
-            // 
-            // numsell
-            // 
-            this.numsell.Text = "Number of Portions sell";
-            this.numsell.Width = 120;
-            // 
-            // PricePerUnit
-            // 
-            this.PricePerUnit.Text = "Price Per Unit";
-            this.PricePerUnit.Width = 120;
-            // 
-            // Totalsell
-            // 
-            this.Totalsell.Text = "Total Sell";
-            this.Totalsell.Width = 100;
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.BackColor = System.Drawing.Color.Black;
-            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.ForeColor = System.Drawing.Color.White;
-            this.label.Location = new System.Drawing.Point(766, 91);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(160, 29);
-            this.label.TabIndex = 27;
-            this.label.Text = "Electronic Bill";
-            // 
-            // Electronic_Bill
-            // 
-            this.Electronic_Bill.AutoSize = true;
-            this.Electronic_Bill.BackColor = System.Drawing.Color.Silver;
-            this.Electronic_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Electronic_Bill.ForeColor = System.Drawing.Color.IndianRed;
-            this.Electronic_Bill.Location = new System.Drawing.Point(782, 131);
-            this.Electronic_Bill.Name = "Electronic_Bill";
-            this.Electronic_Bill.Size = new System.Drawing.Size(53, 29);
-            this.Electronic_Bill.TabIndex = 31;
-            this.Electronic_Bill.Text = "N/A";
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.BackColor = System.Drawing.Color.Black;
-            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label88.ForeColor = System.Drawing.Color.White;
-            this.label88.Location = new System.Drawing.Point(766, 174);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(249, 29);
-            this.label88.TabIndex = 32;
-            this.label88.Text = "Total Salary For Staffs";
-            // 
-            // Salary_Staff
-            // 
-            this.Salary_Staff.AutoSize = true;
-            this.Salary_Staff.BackColor = System.Drawing.Color.Silver;
-            this.Salary_Staff.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salary_Staff.ForeColor = System.Drawing.Color.IndianRed;
-            this.Salary_Staff.Location = new System.Drawing.Point(782, 203);
-            this.Salary_Staff.Name = "Salary_Staff";
-            this.Salary_Staff.Size = new System.Drawing.Size(53, 29);
-            this.Salary_Staff.TabIndex = 33;
-            this.Salary_Staff.Text = "N/A";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightCoral;
-            this.label3.Location = new System.Drawing.Point(229, 339);
+            this.label3.Location = new System.Drawing.Point(259, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(358, 31);
+            this.label3.Size = new System.Drawing.Size(335, 31);
             this.label3.TabIndex = 34;
-            this.label3.Text = "Total This Period Payment";
+            this.label3.Text = "Total Income Last Month";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // Total_of_total
+            // TotalLastMonthLabel
             // 
-            this.Total_of_total.AutoSize = true;
-            this.Total_of_total.BackColor = System.Drawing.Color.Silver;
-            this.Total_of_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total_of_total.ForeColor = System.Drawing.Color.IndianRed;
-            this.Total_of_total.Location = new System.Drawing.Point(255, 382);
-            this.Total_of_total.Name = "Total_of_total";
-            this.Total_of_total.Size = new System.Drawing.Size(53, 29);
-            this.Total_of_total.TabIndex = 35;
-            this.Total_of_total.Text = "N/A";
+            this.TotalLastMonthLabel.AutoSize = true;
+            this.TotalLastMonthLabel.BackColor = System.Drawing.Color.Silver;
+            this.TotalLastMonthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalLastMonthLabel.ForeColor = System.Drawing.Color.IndianRed;
+            this.TotalLastMonthLabel.Location = new System.Drawing.Point(277, 133);
+            this.TotalLastMonthLabel.Name = "TotalLastMonthLabel";
+            this.TotalLastMonthLabel.Size = new System.Drawing.Size(53, 29);
+            this.TotalLastMonthLabel.TabIndex = 35;
+            this.TotalLastMonthLabel.Text = "N/A";
             // 
             // label5
             // 
@@ -531,23 +434,32 @@
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(766, 241);
+            this.label1.Location = new System.Drawing.Point(260, 216);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(247, 29);
             this.label1.TabIndex = 37;
             this.label1.Text = "Total Income by Food";
             // 
-            // Total_income
+            // TotalIncomeLabel
             // 
-            this.Total_income.AutoSize = true;
-            this.Total_income.BackColor = System.Drawing.Color.Silver;
-            this.Total_income.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total_income.ForeColor = System.Drawing.Color.IndianRed;
-            this.Total_income.Location = new System.Drawing.Point(782, 282);
-            this.Total_income.Name = "Total_income";
-            this.Total_income.Size = new System.Drawing.Size(53, 29);
-            this.Total_income.TabIndex = 38;
-            this.Total_income.Text = "N/A";
+            this.TotalIncomeLabel.AutoSize = true;
+            this.TotalIncomeLabel.BackColor = System.Drawing.Color.Silver;
+            this.TotalIncomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalIncomeLabel.ForeColor = System.Drawing.Color.IndianRed;
+            this.TotalIncomeLabel.Location = new System.Drawing.Point(277, 264);
+            this.TotalIncomeLabel.Name = "TotalIncomeLabel";
+            this.TotalIncomeLabel.Size = new System.Drawing.Size(53, 29);
+            this.TotalIncomeLabel.TabIndex = 38;
+            this.TotalIncomeLabel.Text = "N/A";
+            // 
+            // OrdersTextBox
+            // 
+            this.OrdersTextBox.Location = new System.Drawing.Point(655, 88);
+            this.OrdersTextBox.Multiline = true;
+            this.OrdersTextBox.Name = "OrdersTextBox";
+            this.OrdersTextBox.ReadOnly = true;
+            this.OrdersTextBox.Size = new System.Drawing.Size(243, 410);
+            this.OrdersTextBox.TabIndex = 39;
             // 
             // Financial
             // 
@@ -556,16 +468,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1027, 562);
-            this.Controls.Add(this.Total_income);
+            this.Controls.Add(this.OrdersTextBox);
+            this.Controls.Add(this.TotalIncomeLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.Total_of_total);
+            this.Controls.Add(this.TotalLastMonthLabel);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.Salary_Staff);
-            this.Controls.Add(this.label88);
-            this.Controls.Add(this.Electronic_Bill);
-            this.Controls.Add(this.label);
-            this.Controls.Add(this.listView_fiancial);
             this.Controls.Add(this.panelSideMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Financial";
@@ -600,19 +508,11 @@
         private System.Windows.Forms.Button Menu_food_btn;
         private System.Windows.Forms.Button Restaurant_btn;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.ListView listView_fiancial;
-        private System.Windows.Forms.ColumnHeader NameFood;
-        private System.Windows.Forms.ColumnHeader numsell;
-        private System.Windows.Forms.ColumnHeader PricePerUnit;
-        private System.Windows.Forms.ColumnHeader Totalsell;
-        private System.Windows.Forms.Label label;
-        private System.Windows.Forms.Label Electronic_Bill;
-        private System.Windows.Forms.Label label88;
-        private System.Windows.Forms.Label Salary_Staff;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label Total_of_total;
+        private System.Windows.Forms.Label TotalLastMonthLabel;
         public System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Total_income;
+        private System.Windows.Forms.Label TotalIncomeLabel;
+        internal System.Windows.Forms.TextBox OrdersTextBox;
     }
 }

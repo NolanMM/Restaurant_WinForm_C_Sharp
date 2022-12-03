@@ -18,36 +18,20 @@ namespace Restaurant
             InitializeComponent();
             CustomizeDes();
         }
+
         public Staff_Login found_item { get; set; }
+
         private void Financial_Load(object sender, EventArgs e)
         {
             LinkedList<Financial_Restaurant> temp = Financial_Functions.Read_The_Financial_From_File();
-            int number_of_item_in_file = temp.Count();
 
-            float total_total = 0;
-            float total_food = 0;
-            foreach (Financial_Restaurant item in temp)
-            {
-                string[] Split_List_Item = new string[4];
-                Split_List_Item[0] = item.get_NameFood();
-                Split_List_Item[1] = item.get_NumberSell().ToString();
-                Split_List_Item[2] = item.get_Prices().ToString();
-                float total_unit = item.get_NumberSell() * item.get_Prices();
-                total_food += total_unit;
-                Split_List_Item[3] = total_unit.ToString();
+            OrdersTextBox.Text = Financial_Functions.ReturnAllOrdersAsString(temp);
 
-                ListViewItem items = new ListViewItem(Split_List_Item);
-                listView_fiancial.Items.Add(items);
-            }
-
-            Financial_Restaurant temp_node = temp.First();
-
-            Electronic_Bill.Text = temp_node.get_Prices_Electrics().ToString()+ " $";
-            Salary_Staff.Text = temp_node.get_Prices_Salary().ToString() +" $";
-            Total_income.Text = total_food.ToString() + " $";
-            total_total = temp_node.get_Prices_Electrics() + temp_node.get_Prices_Salary();
-            Total_of_total.Text = total_total.ToString() + " $";
+            TotalIncomeLabel.Text = Financial_Functions.ReturnTotalIncome(temp) + "$";
+            TotalLastMonthLabel.Text = Financial_Functions.ReturnIncomeForLastMonth(temp) + "$";
         }
+            
+
         private void CustomizeDes()
         {
             panelRestaurantSubmenu.Visible = false;
@@ -159,5 +143,11 @@ namespace Restaurant
         {
             System.Environment.Exit(0);
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

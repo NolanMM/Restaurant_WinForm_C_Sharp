@@ -10,27 +10,25 @@ namespace Restaurant
     {
         public class Financial_Restaurant
         {
-            private string _Name;
-            private float Prices;
-            private int number_sell;
-            private float Prices_Electrics;
-            private float Prices_Salary;
-            public void set_NameFood(string name) { _Name = name; }
-            public string get_NameFood() { return _Name; }
+            int orderNumber;
+            int totalCost;
+            List<string> orderItems;
+            DateTime orderDateAndTime;     //To initialize: year -> month -> day -> hour -> minute -> second -> ms
 
-            public void set_NumberSell(int portions) { number_sell = portions; }
-            public int get_NumberSell() { return number_sell; }
+            public Financial_Restaurant()
+            { orderNumber = 0; totalCost = 0; orderItems = new List<string>(); orderDateAndTime = new DateTime(); }
 
-            public void set_Prices(float prices) { Prices = prices; }
-            public float get_Prices() { return Prices; }
+            public int OrderNumber
+            { get { return orderNumber; } set { orderNumber = value; } }
 
-            public void set_Prices_Electrics(float prices_Electrics) { Prices_Electrics = prices_Electrics; }
-            public float get_Prices_Electrics() { return Prices_Electrics; }
+            public int TotalCost
+            { get { return totalCost; } set { totalCost = value; } }
 
-            public void set_Prices_Salary(float prices_Salary) { Prices_Salary = prices_Salary; }
-            public float get_Prices_Salary() { return Prices_Salary; }
+            public List<string> ListOrderItems
+            { get { return orderItems; } set { orderItems = new List<string>(value); } }
 
-
+            public string OrderDateAndTime
+            { get { return orderDateAndTime.ToString(); } set { orderDateAndTime = DateTime.Parse(value); } }
         }
     }
 }
