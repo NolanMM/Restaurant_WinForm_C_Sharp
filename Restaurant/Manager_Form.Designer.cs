@@ -218,6 +218,7 @@
             this.Profile_btn.Text = "Profile";
             this.Profile_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Profile_btn.UseVisualStyleBackColor = false;
+            this.Profile_btn.Click += new System.EventHandler(this.Profile_btn_Click);
             // 
             // panelRestaurantSubmenu
             // 
@@ -352,6 +353,7 @@
             this.Menu_food_btn.Text = "I.   Menu Food";
             this.Menu_food_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Menu_food_btn.UseVisualStyleBackColor = false;
+            this.Menu_food_btn.Click += new System.EventHandler(this.Menu_food_btn_Click);
             // 
             // Restaurant_btn
             // 
@@ -372,6 +374,7 @@
             this.Restaurant_btn.Text = "Restaurant";
             this.Restaurant_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Restaurant_btn.UseVisualStyleBackColor = false;
+            this.Restaurant_btn.Click += new System.EventHandler(this.Restaurant_btn_Click_1);
             // 
             // panelLogo
             // 

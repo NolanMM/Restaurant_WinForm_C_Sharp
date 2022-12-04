@@ -22,7 +22,7 @@ namespace Restaurant
         private void Add_btn_Click(object sender, EventArgs e)
         {
             LinkedList<Staff_Login> temp = Login_Functions.Create_Read_Account_Login_List();
-
+            LinkedList<Staff_Login_acount> temp_login = Login_Functions.Create_Read_Account_Login_List_Staff();
             string[] Split_List_Item = new string[7];
             Split_List_Item[0] = Username_box.Text;
             Split_List_Item[1] = Password_box.Text;
@@ -31,7 +31,7 @@ namespace Restaurant
             Split_List_Item[4] = comboBox1.Text;
             Split_List_Item[5] = Salary_Box.Text;
             Split_List_Item[6] = Recovery_Email_box.Text;
-
+            Staff_Login_acount staff = new Staff_Login_acount();
             Staff_Login staff_Login = new Staff_Login();
             staff_Login.setUserName(Username_box.Text);
             staff_Login.setPassword(Password_box.Text);
@@ -43,7 +43,10 @@ namespace Restaurant
             temp.AddFirst(staff_Login);
             Login_Functions.Write_To_File(temp);
 
-
+            staff.setUserName(Username_box.Text);
+            staff.setPassword(Password_box.Text);
+            temp_login.AddFirst(staff);
+            Login_Functions.Write_To_File_Staff(temp_login);
             ListViewItem items = new ListViewItem(Split_List_Item);
             listView_staff.Items.Add(items);
 
@@ -56,8 +59,16 @@ namespace Restaurant
                 DialogResult dl = MessageBox.Show("Do you want to modify this item", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (dl == DialogResult.OK)
                 {
+
                     LinkedList<Staff_Login> temp = Login_Functions.Create_Read_Account_Login_List();
                     Staff_Login staff_Login = Login_Functions.Find_Item_by_selection_Return_Node(listView_staff.SelectedItems[0].SubItems[0].Text, temp);
+                    Staff_Login_acount new_login_infor = new Staff_Login_acount();
+
+                    LinkedList<Staff_Login_acount> temp_list = Login_Functions.Create_Read_Account_Login_List_Staff();
+                    new_login_infor.setUserName(staff_Login.getUserName());
+                    new_login_infor.setPassword(staff_Login.getPassword());
+                    temp_list.Remove(new_login_infor);
+
                     temp.Remove(staff_Login);
                     staff_Login.setUserName(Username_box.Text);
                     staff_Login.setPassword(Password_box.Text);
@@ -67,7 +78,12 @@ namespace Restaurant
                     staff_Login.set_Salary(float.Parse(Salary_Box.Text));
                     staff_Login.setRecovery(Recovery_Email_box.Text);
                     temp.AddFirst(staff_Login);
-                    
+
+                    new_login_infor.setUserName(Username_box.Text);
+                    new_login_infor.setUserName(Password_box.Text);
+                    temp_list.AddFirst(new_login_infor);
+                    Login_Functions.Write_To_File_Staff(temp_list);
+
                     listView_staff.Items.Remove(listView_staff.SelectedItems[0]);
                     string[] Split_List_Item = new string[7];
                     Split_List_Item[0] = Username_box.Text;
@@ -96,13 +112,26 @@ namespace Restaurant
                 if (dl == DialogResult.OK)
                 {
                     LinkedList<Staff_Login> temp = Login_Functions.Create_Read_Account_Login_List();
-                    StreamWriter strm = File.CreateText("Inventory.txt");
+                    StreamWriter strm = File.CreateText("Login.txt");
                     strm.Flush();
                     strm.Close();
                     Staff_Login temp_node = Login_Functions.Find_Item_by_selection_Return_Node(listView_staff.SelectedItems[0].SubItems[0].Text, temp);
+
+                    StreamWriter strm_1 = File.CreateText("Staff_account.txt");
+                    strm_1.Flush();
+                    strm_1.Close();
+
+                    LinkedList<Staff_Login_acount> temp_list = Login_Functions.Create_Read_Account_Login_List_Staff();
+                    Staff_Login_acount new_login_infor = new Staff_Login_acount();
+                    new_login_infor.setUserName(temp_node.getUserName());
+                    new_login_infor.setPassword(temp_node.getPassword());
+
                     bool test = temp.Remove(temp_node);
+                    temp_list.Remove(new_login_infor);
+
                     listView_staff.Items.Remove(listView_staff.SelectedItems[0]);
 
+                    Login_Functions.Write_To_File_Staff(temp_list);
                     Login_Functions.Write_To_File(temp);
                 }
             }

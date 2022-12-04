@@ -33,22 +33,6 @@ namespace Restaurant
             else { subMenu.Visible = false; }
         }
 
-        private void Restaurant_btn_Click(object sender, System.EventArgs e)
-        {
-            showSubMenu(panelRestaurantSubmenu);
-        }
-        private void Profile_btn_Click(object sender, System.EventArgs e)
-        {
-            showSubMenu(panelProfileSubmenu);
-        }
-
-        private void Menu_food_btn_Click(object sender, System.EventArgs e)
-        { 
-            Menu_Food temp = new Menu_Food();
-            temp.temp_login = found_item;
-            temp.Show();
-            this.Hide();
-        }
 
         private void Inventory_btn_Click(object sender, System.EventArgs e)
         {
@@ -109,6 +93,24 @@ namespace Restaurant
             financial_Form.found_item = found_item;
             this.Hide();
             financial_Form.Show();
+        }
+
+        private void Restaurant_btn_Click_1(object sender, System.EventArgs e)
+        {
+            showSubMenu(panelRestaurantSubmenu);
+        }
+
+        private void Profile_btn_Click(object sender, System.EventArgs e)
+        {
+            showSubMenu(panelProfileSubmenu);
+        }
+
+        private void Menu_food_btn_Click(object sender, System.EventArgs e)
+        {
+            Menu_Food temp = new Menu_Food();
+            temp.temp_login = found_item;
+            temp.Show();
+            this.Hide();
         }
     }
 }

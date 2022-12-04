@@ -721,6 +721,7 @@
             this.Controls.Add(this.panelSideMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Staff_List_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Staff_List_Form";
             this.Load += new System.EventHandler(this.Staff_List_Form_Load);
             this.panelSideMenu.ResumeLayout(false);

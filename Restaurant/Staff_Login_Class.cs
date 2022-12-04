@@ -33,4 +33,15 @@ namespace Restaurant
         public void set_Salary(float salary) { Salary = salary; }
         public float get_Salary() { return Salary; }
     }
+    public class Staff_Login_acount
+    {
+        private string _username;
+        private string _password;
+
+        public void setUserName(string Username) { _username = Username; }
+        public string getUserName() { return _username; }
+        public void setPassword(string Password) { _password = Password; }
+        public string getPassword() { return _password; }
+    }
+
 }

@@ -71,6 +71,27 @@ namespace Restaurant
                 return (false, find_item);
             }
         }
+        static public (bool, Staff_Login) Checking_Password_username(LinkedList<Staff_Login> staff_Login_List, string username, Staff_Login staff_Login)
+        {
+            Staff_Login find_item = Find_Item_by_selection_Return_Node(username, staff_Login_List);
+
+            if (find_item == null)
+            {
+                Console.WriteLine("Cannot find username in the system. Please input again\n");
+                return (false, find_item);
+            }
+
+            if (staff_Login.getPassword().CompareTo(find_item.getPassword()) == 0)
+            {
+                Console.WriteLine("Correct password input\nThank you!!");
+                return (false, find_item);
+            }
+            else
+            {
+                Console.WriteLine("Incorrect password input\nPlease input again!!");
+                return (false, find_item);
+            }
+        }
         static public bool Checking_Password_Test(LinkedList<Staff_Login> staff_Login_List, Staff_Login staff_Login)
         {
             Staff_Login find_item = Find_Item_by_username_Return_Node(staff_Login, staff_Login_List);
@@ -329,6 +350,67 @@ namespace Restaurant
             return true;
 
         }
-      
+
+        static public LinkedList<Staff_Login_acount> Create_Read_Account_Login_List_Staff()
+        {
+            LinkedList<Staff_Login_acount> list_Account = new LinkedList<Staff_Login_acount>();
+            string filename = @"C:\Users\Minh\source\repos\Test_Test\Test_Test\bin\Debug\Login.txt";
+            var lines = File.ReadLines(filename);
+            foreach (string line in lines)
+            {
+                Staff_Login_acount temp = new Staff_Login_acount();
+                //string raw = Encrypted_Login.Decrypt(line);
+                string[] Split_List_Item = line.Split('-');
+
+                string username = Split_List_Item[0];
+                string password = Split_List_Item[1];
+
+
+                temp.setUserName(username);
+                temp.setPassword(password); ;
+                list_Account.AddFirst(temp);
+            }
+            return list_Account;
+        }
+        static public Staff_Login Find_List_Staff(Staff_Login_acount here)
+        {
+            LinkedList<Staff_Login> list_Account = Create_Read_Account_Login_List();
+
+            foreach (Staff_Login item in list_Account)
+            {
+                if (here.getUserName() == item.getUserName())
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
+        static public bool Write_To_File_Staff(LinkedList<Staff_Login_acount> list_account)
+        {
+            /*@ Assign the file */
+            string filename = "Staff_account.txt";
+            int counter = list_account.Count();
+            int i = 0;
+            string[] staff_line = new string[counter];
+            /*@ Check the number of items inside the list*/
+            if (list_account.Count() == 0)
+            {
+                Console.WriteLine("The list is empty cannot write to file\n");
+                return false;
+            }
+
+            /*@ Loop through each item in the list */
+            foreach (Staff_Login_acount staff in list_account)
+            {
+                string Write_to_File_Format = staff.getUserName() + "-" + staff.getPassword();
+                staff_line[i] = Encrypted_Login.Encrypt(Write_to_File_Format);
+                i++;
+            }
+            File.WriteAllLines(filename, staff_line);
+            return true;
+
+        }
+
+
     }
 }
