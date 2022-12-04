@@ -13,7 +13,7 @@ namespace Restaurant
         {
             LinkedList<Salary_Staff> temp_List_In_Inventory = new LinkedList<Salary_Staff>();
 
-            string filename = "Salary.txt";
+            string filename = "Test_salary.txt";
             /* @ Loop through all the line in the file...................................*/
             var lines = File.ReadLines(filename);
             //string line_temp = "minhle-Minh-Nguyen-23.3-3-2-4-3-2-2-1";

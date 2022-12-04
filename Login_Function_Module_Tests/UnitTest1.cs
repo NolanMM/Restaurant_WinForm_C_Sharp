@@ -241,7 +241,7 @@ namespace Restaurant_Integration_Tests
         }
 
         [TestMethod]
-        [DeploymentItem("Salary.txt", "C:\\Users\\Minh\\source\\repos\\Restaurant\\Restaurant\\bin\\Debug")]
+        [DeploymentItem("Test_salary.txt", "C:\\Users\\Minh\\source\\repos\\Restaurant\\Restaurant\\bin\\Debug")]
         public void SALARY_MODULE_READ_FROM_FILE_TEST_CASE()
         {
             // Arrange
@@ -249,7 +249,7 @@ namespace Restaurant_Integration_Tests
             LinkedList<Salary_Staff> temp_List_In_Salary = new LinkedList<Salary_Staff>();
             Salary_Staff test = new Salary_Staff();
             /* @ Loop through all the line in the file...................................*/
-            var lines = System.IO.File.ReadAllLines(@"C:\Users\Minh\source\repos\Restaurant\Restaurant\bin\Debug\Salary.txt");
+            var lines = System.IO.File.ReadAllLines(@"C:\Users\Minh\source\repos\Restaurant\Restaurant\bin\Debug\Test_salary.txt");
             foreach (var line in lines)
             {
                 Salary_Staff salary_node = new Salary_Staff();
@@ -304,14 +304,14 @@ namespace Restaurant_Integration_Tests
         }
 
         [TestMethod]
-        [DeploymentItem("Salary.txt", "C:\\Users\\Minh\\source\\repos\\Restaurant\\Restaurant\\bin\\Debug")]
+        [DeploymentItem("Test_salary.txt", "C:\\Users\\Minh\\source\\repos\\Restaurant\\Restaurant\\bin\\Debug")]
         public void SALARY_MODULE_WRITE_FILE_TEST_CASE()
         {
             // Arrange
 
             LinkedList<Salary_Staff> temp_List_In_Salary = new LinkedList<Salary_Staff>();
             /* @ Loop through all the line in the file...................................*/
-            var lines = System.IO.File.ReadAllLines(@"C:\Users\Minh\source\repos\Restaurant\Restaurant\bin\Debug\Salary.txt");
+            var lines = System.IO.File.ReadAllLines(@"C:\Users\Minh\source\repos\Restaurant\Restaurant\bin\Debug\Test_salary.txt");
             foreach (var line in lines)
             {
                 Salary_Staff salary_node = new Salary_Staff();
@@ -361,7 +361,7 @@ namespace Restaurant_Integration_Tests
             LinkedList<Salary_Staff> List_In_Inventory = new LinkedList<Salary_Staff>();
             Salary_Staff test = new Salary_Staff();
 
-            var lines_temp = System.IO.File.ReadAllLines(@"C:\Users\Minh\source\repos\Restaurant\Restaurant\bin\Debug\Salary.txt");
+            var lines_temp = System.IO.File.ReadAllLines(@"C:\Users\Minh\source\repos\Restaurant\Restaurant\bin\Debug\Test_salary.txt");
             foreach (var line in lines_temp)
             {
                 Salary_Staff salary_node = new Salary_Staff();
