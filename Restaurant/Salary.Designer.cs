@@ -102,10 +102,10 @@
             this.panel1.Controls.Add(this.Tuesday);
             this.panel1.Controls.Add(this.Monday);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1027, 562);
+            this.panel1.Size = new System.Drawing.Size(1027, 563);
             this.panel1.TabIndex = 3;
             // 
             // panelSideMenu
@@ -123,7 +123,7 @@
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(218, 562);
+            this.panelSideMenu.Size = new System.Drawing.Size(218, 563);
             this.panelSideMenu.TabIndex = 31;
             // 
             // Exit_btn
@@ -677,6 +677,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Salary";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Salary";
             this.Load += new System.EventHandler(this.Salary_Load);
             this.panel1.ResumeLayout(false);

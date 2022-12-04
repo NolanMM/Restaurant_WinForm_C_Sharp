@@ -55,7 +55,7 @@ namespace Restaurant
         }
         static public void Store_The_Salary_To_File(LinkedList<Salary_Staff> list_staff)
         {
-            string filename = "Salary.txt";
+            string filename = "Test_salary.txt";
             int counter = list_staff.Count();
             string[] salary_line = new string[counter];
             int i = 0;

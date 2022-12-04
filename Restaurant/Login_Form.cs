@@ -34,6 +34,7 @@ namespace Restaurant
             {
                 // Manager Forms
                 Manager_Form frm = new Manager_Form();
+                frm.found_item = found;
                 this.Hide();
                 frm.Show();
             }

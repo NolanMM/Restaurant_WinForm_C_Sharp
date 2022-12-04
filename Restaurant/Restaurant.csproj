@@ -92,6 +92,7 @@
     <Compile Include="New_password_form.Designer.cs">
       <DependentUpon>New_password_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Price_Coupon_Module.cs" />
     <Compile Include="Properties\Resources.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <DependentUpon>Resources.cs</DependentUpon>
