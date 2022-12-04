@@ -5,6 +5,10 @@ namespace Restaurant
 {
     public static class Menu
     {
+        static public bool Login_Menu_Stub_fortest()
+        {
+            return true;
+        }
         static public void Login_Menu()
         {
             bool isNumerical = false;

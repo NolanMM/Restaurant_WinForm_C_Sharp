@@ -153,17 +153,17 @@ namespace Restaurant
                 foreach (Salary_Staff item in temp)
                 {
                     string[] Split_List_Item = new string[11];
-                    Split_List_Item[0] = Username_box.Text;
-                    Split_List_Item[1] = firstname_box.Text;
-                    Split_List_Item[2] = Lastname_box.Text;
-                    Split_List_Item[3] = Salary_Box.Text;
-                    Split_List_Item[4] = Mon_box.Text;
-                    Split_List_Item[5] = Tue_box.Text;
-                    Split_List_Item[6] = Wed_box.Text;
-                    Split_List_Item[7] = Thur_box.Text;
-                    Split_List_Item[8] = Fri_box.Text;
-                    Split_List_Item[9] = Sat_box.Text;
-                    Split_List_Item[10] = Sun_box.Text;
+                    Split_List_Item[0] = item.getFirstName();
+                    Split_List_Item[1] = item.getLastName();
+                    Split_List_Item[2] = item.get_Salary().ToString();
+                    Split_List_Item[3] = item.get_Working_Hour_mon().ToString();
+                    Split_List_Item[4] = item.get_Working_Hour_tue().ToString();
+                    Split_List_Item[5] = item.get_Working_Hour_wed().ToString();
+                    Split_List_Item[6] = item.get_Working_Hour_thur().ToString();
+                    Split_List_Item[7] = item.get_Working_Hour_fri().ToString();
+                    Split_List_Item[8] = item.get_Working_Hour_sat().ToString();
+                    Split_List_Item[9] = item.get_Working_Hour_sun().ToString();
+                    Split_List_Item[10] = item.getUserName();
                     ListViewItem items = new ListViewItem(Split_List_Item);
                     listView_inventory.Items.Add(items);
                 }

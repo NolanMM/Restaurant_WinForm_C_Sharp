@@ -118,10 +118,10 @@
             this.Exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Exit_btn.Location = new System.Drawing.Point(0, 526);
+            this.Exit_btn.Location = new System.Drawing.Point(0, 621);
             this.Exit_btn.Name = "Exit_btn";
             this.Exit_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Exit_btn.Size = new System.Drawing.Size(218, 20);
+            this.Exit_btn.Size = new System.Drawing.Size(201, 40);
             this.Exit_btn.TabIndex = 6;
             this.Exit_btn.Text = "Exit";
             this.Exit_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -138,10 +138,10 @@
             this.About_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.About_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.About_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.About_btn.Location = new System.Drawing.Point(0, 505);
+            this.About_btn.Location = new System.Drawing.Point(0, 581);
             this.About_btn.Name = "About_btn";
             this.About_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.About_btn.Size = new System.Drawing.Size(218, 21);
+            this.About_btn.Size = new System.Drawing.Size(201, 40);
             this.About_btn.TabIndex = 5;
             this.About_btn.Text = "About";
             this.About_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -158,10 +158,10 @@
             this.Help_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Help_btn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Help_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Help_btn.Location = new System.Drawing.Point(0, 486);
+            this.Help_btn.Location = new System.Drawing.Point(0, 541);
             this.Help_btn.Name = "Help_btn";
             this.Help_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Help_btn.Size = new System.Drawing.Size(218, 19);
+            this.Help_btn.Size = new System.Drawing.Size(201, 40);
             this.Help_btn.TabIndex = 4;
             this.Help_btn.Text = "Help";
             this.Help_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -175,9 +175,9 @@
             this.panelProfileSubmenu.Controls.Add(this.Timetable_btn);
             this.panelProfileSubmenu.Controls.Add(this.Salary_btn);
             this.panelProfileSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProfileSubmenu.Location = new System.Drawing.Point(0, 363);
+            this.panelProfileSubmenu.Location = new System.Drawing.Point(0, 418);
             this.panelProfileSubmenu.Name = "panelProfileSubmenu";
-            this.panelProfileSubmenu.Size = new System.Drawing.Size(218, 123);
+            this.panelProfileSubmenu.Size = new System.Drawing.Size(201, 123);
             this.panelProfileSubmenu.TabIndex = 3;
             // 
             // Change_password_btn
@@ -193,7 +193,7 @@
             this.Change_password_btn.Location = new System.Drawing.Point(0, 80);
             this.Change_password_btn.Name = "Change_password_btn";
             this.Change_password_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Change_password_btn.Size = new System.Drawing.Size(218, 43);
+            this.Change_password_btn.Size = new System.Drawing.Size(201, 43);
             this.Change_password_btn.TabIndex = 2;
             this.Change_password_btn.Text = "III. Change Password";
             this.Change_password_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,7 +213,7 @@
             this.Timetable_btn.Location = new System.Drawing.Point(0, 40);
             this.Timetable_btn.Name = "Timetable_btn";
             this.Timetable_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Timetable_btn.Size = new System.Drawing.Size(218, 40);
+            this.Timetable_btn.Size = new System.Drawing.Size(201, 40);
             this.Timetable_btn.TabIndex = 1;
             this.Timetable_btn.Text = "II. Timetable";
             this.Timetable_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -233,7 +233,7 @@
             this.Salary_btn.Location = new System.Drawing.Point(0, 0);
             this.Salary_btn.Name = "Salary_btn";
             this.Salary_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Salary_btn.Size = new System.Drawing.Size(218, 40);
+            this.Salary_btn.Size = new System.Drawing.Size(201, 40);
             this.Salary_btn.TabIndex = 0;
             this.Salary_btn.Text = "I.  Salary";
             this.Salary_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -250,10 +250,10 @@
             this.Profile_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Profile_btn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.Profile_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Profile_btn.Location = new System.Drawing.Point(0, 318);
+            this.Profile_btn.Location = new System.Drawing.Point(0, 373);
             this.Profile_btn.Name = "Profile_btn";
             this.Profile_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Profile_btn.Size = new System.Drawing.Size(218, 45);
+            this.Profile_btn.Size = new System.Drawing.Size(201, 45);
             this.Profile_btn.TabIndex = 2;
             this.Profile_btn.Text = "Profile";
             this.Profile_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -270,9 +270,9 @@
             this.panelRestaurantSubmenu.Controls.Add(this.Inventory_btn);
             this.panelRestaurantSubmenu.Controls.Add(this.Menu_food_btn);
             this.panelRestaurantSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelRestaurantSubmenu.Location = new System.Drawing.Point(0, 78);
+            this.panelRestaurantSubmenu.Location = new System.Drawing.Point(0, 133);
             this.panelRestaurantSubmenu.Name = "panelRestaurantSubmenu";
-            this.panelRestaurantSubmenu.Size = new System.Drawing.Size(218, 240);
+            this.panelRestaurantSubmenu.Size = new System.Drawing.Size(201, 240);
             this.panelRestaurantSubmenu.TabIndex = 1;
             // 
             // button3
@@ -288,7 +288,7 @@
             this.button3.Location = new System.Drawing.Point(0, 200);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(218, 40);
+            this.button3.Size = new System.Drawing.Size(201, 40);
             this.button3.TabIndex = 5;
             this.button3.Text = "VI. Salary List";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -308,7 +308,7 @@
             this.button2.Location = new System.Drawing.Point(0, 160);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(218, 40);
+            this.button2.Size = new System.Drawing.Size(201, 40);
             this.button2.TabIndex = 4;
             this.button2.Text = "V.  Staff List";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -328,7 +328,7 @@
             this.button1.Location = new System.Drawing.Point(0, 120);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(218, 40);
+            this.button1.Size = new System.Drawing.Size(201, 40);
             this.button1.TabIndex = 3;
             this.button1.Text = "IV. Financial";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -348,7 +348,7 @@
             this.Security_btn.Location = new System.Drawing.Point(0, 80);
             this.Security_btn.Name = "Security_btn";
             this.Security_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Security_btn.Size = new System.Drawing.Size(218, 40);
+            this.Security_btn.Size = new System.Drawing.Size(201, 40);
             this.Security_btn.TabIndex = 2;
             this.Security_btn.Text = "III. Security";
             this.Security_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -368,7 +368,7 @@
             this.Inventory_btn.Location = new System.Drawing.Point(0, 40);
             this.Inventory_btn.Name = "Inventory_btn";
             this.Inventory_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Inventory_btn.Size = new System.Drawing.Size(218, 40);
+            this.Inventory_btn.Size = new System.Drawing.Size(201, 40);
             this.Inventory_btn.TabIndex = 1;
             this.Inventory_btn.Text = "II.  Inventory";
             this.Inventory_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -388,7 +388,7 @@
             this.Menu_food_btn.Location = new System.Drawing.Point(0, 0);
             this.Menu_food_btn.Name = "Menu_food_btn";
             this.Menu_food_btn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Menu_food_btn.Size = new System.Drawing.Size(218, 40);
+            this.Menu_food_btn.Size = new System.Drawing.Size(201, 40);
             this.Menu_food_btn.TabIndex = 0;
             this.Menu_food_btn.Text = "I.   Menu Food";
             this.Menu_food_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -406,10 +406,10 @@
             this.Restaurant_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Restaurant_btn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Restaurant_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Restaurant_btn.Location = new System.Drawing.Point(0, 33);
+            this.Restaurant_btn.Location = new System.Drawing.Point(0, 88);
             this.Restaurant_btn.Name = "Restaurant_btn";
             this.Restaurant_btn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Restaurant_btn.Size = new System.Drawing.Size(218, 45);
+            this.Restaurant_btn.Size = new System.Drawing.Size(201, 45);
             this.Restaurant_btn.TabIndex = 0;
             this.Restaurant_btn.Text = "Restaurant";
             this.Restaurant_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -422,7 +422,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(218, 33);
+            this.panelLogo.Size = new System.Drawing.Size(201, 88);
             this.panelLogo.TabIndex = 0;
             // 
             // panel1
@@ -784,6 +784,7 @@
             this.Working_sat,
             this.Working_sun,
             this.Username});
+            this.listView_inventory.ForeColor = System.Drawing.Color.White;
             this.listView_inventory.GridLines = true;
             this.listView_inventory.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView_inventory.HideSelection = false;
@@ -852,6 +853,7 @@
             this.Controls.Add(this.panelSideMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Salary_List_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Salary_List_Form";
             this.Load += new System.EventHandler(this.Salary_List_Form_Load);
             this.panelSideMenu.ResumeLayout(false);

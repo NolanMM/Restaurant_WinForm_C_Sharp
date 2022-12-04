@@ -12,16 +12,22 @@ namespace Restaurant
         static public LinkedList<Salary_Staff> Read_The_Salary_From_File()
         {
             LinkedList<Salary_Staff> temp_List_In_Inventory = new LinkedList<Salary_Staff>();
-            
 
+            string filename = "Salary.txt";
             /* @ Loop through all the line in the file...................................*/
-            var lines = File.ReadLines("Salary.txt");
-            foreach (var line in lines)
+            var lines = File.ReadLines(filename);
+            //string line_temp = "minhle-Minh-Nguyen-23.3-3-2-4-3-2-2-1";
+            foreach (string line in lines)
             {
+                string line_temp = line.ToString();
                 Salary_Staff salary_node = new Salary_Staff();
-                /* Store the Name of the food in the Split_List_Item_Food[0] (String)....*/
-                /* Store the Portion of the food in the Split_List_Item_Food[1] (String).*/
                 string[] Split_List_Item_Food = line.Split('-');
+
+                /* Store information of the food into the node of the list of the food...*/
+                salary_node.setUserName(Split_List_Item_Food[0]);
+                salary_node.setFirstName(Split_List_Item_Food[1]);
+                salary_node.setLastName(Split_List_Item_Food[2]);
+
                 float Salary_per_Hour = (float)Convert.ToDouble(Split_List_Item_Food[3]);
                 float Working_Hour_mon = (float)Convert.ToDouble(Split_List_Item_Food[4]);
                 float Working_Hour_tue = (float)Convert.ToDouble(Split_List_Item_Food[5]);
@@ -31,10 +37,7 @@ namespace Restaurant
                 float Working_Hour_sat = (float)Convert.ToDouble(Split_List_Item_Food[9]);
                 float Working_Hour_sun = (float)Convert.ToDouble(Split_List_Item_Food[10]);
 
-                /* Store information of the food into the node of the list of the food...*/
-                salary_node.setUserName(Split_List_Item_Food[0]);
-                salary_node.setFirstName(Split_List_Item_Food[1]);
-                salary_node.setLastName(Split_List_Item_Food[2]);
+                
 
                 salary_node.set_Salary(Salary_per_Hour);
                 salary_node.set_Working_Hour_mon(Working_Hour_mon);
@@ -46,6 +49,7 @@ namespace Restaurant
                 salary_node.set_Working_Hour_sun(Working_Hour_sun);
                 /* | Add the node to the list of the food in the fridge..................*/
                 temp_List_In_Inventory.AddFirst(salary_node);
+
             }
             return temp_List_In_Inventory;
         }

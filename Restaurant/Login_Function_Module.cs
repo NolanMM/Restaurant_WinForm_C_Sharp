@@ -71,7 +71,24 @@ namespace Restaurant
                 return (false, find_item);
             }
         }
+        static public bool Checking_Password_Test(LinkedList<Staff_Login> staff_Login_List, Staff_Login staff_Login)
+        {
+            Staff_Login find_item = Find_Item_by_username_Return_Node(staff_Login, staff_Login_List);
 
+            if (find_item == null)
+            {
+                return false;
+            }
+
+            if (staff_Login.getPassword().CompareTo(find_item.getPassword()) == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         static public Staff_Login Find_Item_by_username_Return_Node(Staff_Login staff_Login, LinkedList<Staff_Login> staff_Login_List)
         {
             Staff_Login find_item = new Staff_Login();
@@ -130,7 +147,6 @@ namespace Restaurant
         static public LinkedList<Staff_Login> Create_Read_Account_Login_List()
         {
             
-            Staff_Login temp_login = new Staff_Login();
             LinkedList<Staff_Login> list_Account = new LinkedList<Staff_Login>();
             string filename = "Login.txt";
             var lines = File.ReadLines(filename);
