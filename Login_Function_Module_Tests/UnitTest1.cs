@@ -1,5 +1,8 @@
+using Moq;
 using Restaurant;
 using System.Data;
+using System.IO;
+using System.Text;
 using static Restaurant.Inventory_Stub_Class;
 
 namespace Restaurant_Integration_Tests
@@ -411,5 +414,113 @@ namespace Restaurant_Integration_Tests
             Assert.IsFalse(checking);
         }
 
+
+
+        [TestMethod]
+
+        public void PRICE_MODULE_READ_FROM_FILE_TEST_CASE()
+        {
+            // Arrange 
+            string path = @"Price.txt";
+            File.Delete(path);
+
+            // Act
+            Price_Module_Functions.Price("apple", 2.99);
+
+            string[] lines = File.ReadAllLines(path);
+            string expectedOutput = "apple 2.99";
+            
+            // Assert
+            Assert.AreEqual(expectedOutput, lines[0]);
+            
+
+        }
+
+
+        [TestMethod]
+
+        public void PRICE_MODULE_WRITE_TO_FILE_TEST_CASE()
+        {
+            // Arrange 
+
+            string path = @"Price.txt";
+            File.Delete(path);
+
+            // Act
+            Price_Module_Functions.Price("banana", 5.99);
+
+            string[] lines = File.ReadAllLines(path);
+            string expectedInput = "banana 5.99";
+            
+            // Assert
+            
+            Assert.AreEqual(expectedInput, lines[0]);
+        }
+
+
+        [TestMethod]
+
+        public void CREATE_COUPON_WRITE_TO_FILE_TEST_CASE()
+        {
+            // Arrange 
+
+            string path = @"Coupon.txt";
+            File.Delete(path);
+
+            // Act
+            Price_Module_Functions.Coupon("December2022");
+            string[] lines = File.ReadAllLines(path);
+            string createdCoupon = "December2022";
+
+            // Assert
+            Assert.AreEqual(createdCoupon, lines[0]);  
+
+
+        }
+        [TestMethod]
+
+        public void EDIT_PRICE_USABILITY_TEST_CASE()
+        {
+            // Arrange 
+            
+            string path = @"Price.txt";
+            
+            
+            // Act
+            Price_Module_Functions.Edit_Price("apple");
+
+            
+            string[] lines = File.ReadAllLines(path);
+            Price_Module_Functions.Edit_Price("apple 12.99");
+           File.WriteAllLines(path, lines);
+            string expectedInput = "apple 12.99";
+
+            // Assert
+
+            Assert.AreNotEqual(expectedInput, lines[0]);
+
+        }
+
+
+        [TestMethod]
+
+        public void EDIT_COUPONS_USABILITY_TEST_CASE()
+        {
+
+            // Arrange 
+
+            string path = @"Coupon.txt";
+            
+
+            // Act
+            Price_Module_Functions.Coupon("December2022");
+            string[] lines = File.ReadAllLines(path);
+            string createdCoupon = "December2019";
+
+            // Assert
+            Assert.AreNotEqual(createdCoupon, lines[0]);
+
+
+        }
     }
-}
+}   

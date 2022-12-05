@@ -1,27 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 
 namespace Restaurant
 {
-    public static class Price_Module_Functions
+    public class Price_Module_Functions
     {
-        public static void Price()
+
+        
+        public static void Price(string item, double price)
         {
             {
+
                 // Path of file
                 string path = @"Price.txt";
 
                 // Ask for Item with Price (ex. "apple 1.99")
-                Console.WriteLine("Add Item with Price: ");
-
-                string input = Console.ReadLine();
-                string[] words = input.Split(' ');
-
-                string item = words[0];
-                string price = words[1];
+            
 
                 bool exists = false;
                 if (File.Exists(path))
@@ -55,17 +53,13 @@ namespace Restaurant
         }
 
 
-        public static void Edit_Price()
+        public static void Edit_Price(string item )
         {
             string path = @"Price.txt";
 
             // Ask for the Item the user want to change the price for.
 
             Console.WriteLine("Enter Item Name to Change its Price: ");
-
-            string input = Console.ReadLine();
-
-            string item = input;
 
 
             bool exists = false;
@@ -153,7 +147,7 @@ namespace Restaurant
 
         }
 
-        public static void Coupon()
+        public static void Coupon(string coupon)
         {
 
 
@@ -163,8 +157,7 @@ namespace Restaurant
             // Ask for Coupon Name (ex. "Dec2019")
             Console.WriteLine("Enter Coupon to Add to system: ");
 
-            string coupon = Console.ReadLine();
-
+            
 
 
             bool exists = false;
@@ -295,4 +288,22 @@ namespace Restaurant
 
         }
     }
+
+    public class Price_Coupon_TestStuff
+    {
+
+
+        private string item;
+        private string price;
+
+        public void setItem(string Item) { item = Item; }
+        public void setPrice(string Price) { price = Price;}
+
+        public string getItem() { return price;}   
+        
+        public string getPrice() { return price;}  
+
+
+    }
+
 }
